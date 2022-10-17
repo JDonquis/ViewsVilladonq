@@ -1,0 +1,80 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.login_form {
+    @include full-screen($color3);
+    @include flex-center();
+    color: white;
+    top: -100%;
+
+    transition: all .3s ease;
+
+
+    .close_btn {            
+        position: absolute;
+        top: 50px;
+        right: 50px;  
+        outline: 0;
+        background: none;
+ 
+        &:hover {
+            cursor: pointer;
+
+            path {
+                stroke: $color4
+            }
+        }
+
+        path {
+            stroke: $color1;
+        }
+     
+    }    
+
+    @include card-form();
+
+    fieldset {  
+        legend {
+            padding-top: 70px;
+        }
+
+        i {
+            position: absolute;
+            top: 10px;
+            width: 50px;
+            right: -25px;
+            z-index: 40 !important;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:hover path {
+                fill: $color4  !important;
+            }
+
+            .open_eye {
+                display: none;
+            }
+
+            svg path {
+                fill: $color3  !important;
+            }
+        }
+
+        
+    }
+
+}

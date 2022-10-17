@@ -1,0 +1,113 @@
+@import '../base';
+@import '../layouts/_nav';
+@import '../_components';
+@import '../layouts/_login'; 
+@import '../mySlider';
+
+h1 { 
+    margin-block: 25px;
+    color: rgba(255, 255, 255, 0.863);
+    @media (min-width: 700px) {
+        max-block: none;
+        font-size: $bigFont;   
+        border-left: 7.5px solid $color3;   
+        padding-left: 30px;     
+    }       
+    span {
+        background: $color2;   
+    }
+}
+.parent_inscribe_link {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 110;
+    .link_to_inscribe {  
+        border-radius: 2px;
+        float: right;
+        max-width: 100px;
+        text-align: center;   
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.685);
+    }
+
+} 
+.home_header {
+    display: flex;
+    overflow: hidden;
+    align-items: center;        
+    position: relative;
+    gap: 20px; 
+    flex-direction: column;
+    @media (min-width: 700px) {   
+        margin-top: 70px;
+        justify-content: space-between;    
+        flex-direction: row;
+    }
+
+    
+}
+.circle_img_cont  {    
+    $size_square : clamp(250px, 30vw,400px); 
+    margin: 30px; 
+    height: $size_square;
+    width: $size_square;
+    position: relative;               
+    &:after {
+        box-sizing: border-box;   
+        content: '';
+        position: absolute;
+        width: calc($size_square + 45px);
+        height: calc($size_square + 45px);
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);  
+        border: 1px solid $color3;
+
+    } 
+    &:before {
+        box-sizing: border-box;
+        content: '';
+        position: absolute;
+        width: calc($size_square + 21px);
+        height: calc($size_square + 21px);
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);  
+        border: solid 5px ;  
+        transform-origin: center;
+        border-color: $color4 $color1 $color4 $color1;             
+        // box-shadow: 0 0 0 50px red;
+        animation: rotateInfinite 19s ease-in-out infinite ;
+    }  
+    @keyframes rotateInfinite {
+        0% {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(-405deg);
+        }
+    }
+    .slider_wrap {
+        height: 100%;    
+
+        &::before {
+            content: '';
+            background: #081f3d3b;
+            inset: 0;
+            border-radius: 50%;
+            z-index: 100;
+        }
+        .each_slider_element {          
+            overflow: hidden; 
+            border-radius: 50%;
+        }
+    }
+       img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+}

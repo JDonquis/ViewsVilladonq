@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+
+$bigFont: clamp(28px, 6vw, 60px);
+
+/* colores */
+$color1: #081f3d;
+$color2: #1f4287;
+$color3: #278ea5;
+$color4: #21e6c1;
+$color-red: rgb(139, 0, 0);
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin full-screen($bg: rgba(0, 0, 0, 0.582)) {
+  position: fixed;
+  width: 100%;
+  background: $bg;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1039 !important;
+  &.full_screen_down {
+    transform: translateY(100vh);
+  }
+}
+.full-screen {
+  @include full-screen();
+}
+.flex-center {
+  @include flex-center();
+}
+@mixin container() {
+  width: clamp(300px, 85%, 1100px);
+  margin: auto;
+}
+.container {
+  @include container();
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  color: inherit;
+  padding: 0;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+body {
+  background: $color1;
+}
+ul {
+  list-style-type: none;
+  margin-bottom: 0 ;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Libre Baskerville", serif;
+  & * {
+    font-family: "Libre Baskerville", serif;
+  }
+}
+input {
+  outline: none;
+  border: NONE;
+}
+button {
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+fieldset {
+  border: none;
+}
+
+/// ANIMATIONS ******************************************************
+.bottomToUp {
+  opacity: 0;
+  position: relative;
+  animation: bottomToUp 1s ease;
+  animation-fill-mode: forwards;
+  transform: translateY(70px);
+  @keyframes bottomToUp {
+    from {
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}
+
+.TopToDown {
+  opacity: 0;
+  position: relative;
+  animation: TopToDown 1s ease;
+  animation-fill-mode: forwards;
+  transform: translateY(-70px);
+  @keyframes TopToDown {
+    from {
+    }
+    to {
+      opacity: 1;
+      transform: inherit;
+    }
+  }
+}
+
+.leftToRight {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: leftToRight 1s ease;
+  animation-fill-mode: forwards;
+  @keyframes leftToRight {
+    from {
+    } 
+    to {
+      transform: inherit;
+      opacity: 1;
+    }
+  }
+}
+.opacity_1 { 
+  opacity: 0;
+  animation: opacity_1 1s ease;
+  animation-fill-mode: forwards;
+  @keyframes opacity_1 {
+    from {
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+.width_0 {
+  width: 0%;
+  animation: width_0 2s ease;
+  animation-fill-mode: forwards;
+
+  @keyframes width_0 {
+    from {
+    }
+    to {
+      width: 100%;
+    }
+  }
+}
+
+.screenShow {
+  @include full-screen($color3);
+  @include flex-center();
+  overflow: hidden;
+  z-index: 100;
+  &.hidden_screen_loader {
+    transition: 0.6s ease;
+    transition-delay: 0.1s;
+    transform: translateX(-100%);
+  }
+  &.toUp {
+    animation: toUp 0.5s ease forwards;
+  }
+  @keyframes toUp {
+    0% {
+      transform: translateY(200vh);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  .shadowsLoader {
+    width: max(300px, 50%);
+    height: 360px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 40px;
+    border-radius: 3px;
+    span {
+      color: hsl(191, 80%, 33%);
+      animation: moveShadows 1.6s linear infinite;
+      @for $i from 1 through 7 {
+        &:nth-of-type(#{$i}) {
+          animation-delay: #{$i / 10 + $i/10 - 0.2}s;
+        }
+      }
+    }
+  }
+  @keyframes moveShadows {
+    0% {
+      box-shadow: 0 0 0 $color1;
+      opacity: 0;
+      transform: translateX(-50px) scale(1);
+    }
+    50% {
+      box-shadow: 0 10px 50px $color1;
+      transform: translateX(0px) scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      box-shadow: 0 0 0 $color1;
+      opacity: 0;
+      transform: translateX(50px) scale(1);
+    }
+  }
+}
+
+// CLCASSES
+.d-none {
+  display: none;
+}
