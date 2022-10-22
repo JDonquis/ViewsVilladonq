@@ -1,5 +1,4 @@
-<?php require_once $_SERVER["DOCUMENT_ROOT"]."/VillaDonq/helpers/type_user.php"; ?>
-<?php include_once $_SERVER['DOCUMENT_ROOT']."/VillaDonq/routes/routes.php"; ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +26,7 @@
         <!-- Main Sidebar Container -->
         <?php require_once "../../sections/_prof-menu.php"; ?>
 
-        <input type="hidden" id="input-id" value="<?php echo $user->get_id(); ?>">
+        <input type="hidden" id="input-id" value="1">
         
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -177,10 +176,10 @@ De los reinos: bla bla bla bla extera excetara excetera y todo lo que tenga que 
                             <!-- /.card -->
                         </div>
                         <input type="hidden" name="insert" value="1">
-                        <input type="hidden" name="teacher_id" value="<?php echo $user->get_id(); ?>">
-                        <input type="hidden" name="name_teacher" value="<?php echo $user->get_name(); ?>">
-                        <input type="hidden" name="last_name_teacher" value="<?php echo $user->get_last_name(); ?>">
-                        <input type="hidden" name="unidades" value="" id="N_uni">
+                        <input type="hidden" name="teacher_id" value="1">
+                        <input type="hidden" name="name_teacher" value="1">
+                        <input type="hidden" name="last_name_teacher" value="1">
+                        <input type="hidden" name="unidades" value="1" id="N_uni">
                     </form>
                 </div>
                 <!-- /.row -->

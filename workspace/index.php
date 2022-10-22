@@ -1,6 +1,5 @@
 
-<?php require_once $_SERVER["DOCUMENT_ROOT"]."/VillaDonq/helpers/type_user.php"; ?>
-<?php include_once $_SERVER['DOCUMENT_ROOT']."/VillaDonq/routes/routes.php"; ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,13 +34,13 @@
 
   <?php      
   
-    if($_SESSION['id_position']==1) include_once "sections/_prof-menu.php";
+    // if($_SESSION['id_position']==1) include_once "sections/_prof-menu.php";
 
-    elseif($_SESSION['id_position']==2) { include_once "sections/_administrative-menu.php"; }
+    // elseif($_SESSION['id_position']==2) { include_once "sections/_administrative-menu.php"; }
 
-    elseif($_SESSION['id_position']==3) { include_once "sections/_manager-menu.php"; }
+    // elseif($_SESSION['id_position']==3) { include_once "sections/_manager-menu.php"; }
         
-    elseif($_SESSION['id_position']==4) { include_once "sections/_student-menu.php";  }       
+    // elseif($_SESSION['id_position']==4) { include_once "sections/_student-menu.php";  }       
 
   ?> 
 

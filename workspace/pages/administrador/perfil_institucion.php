@@ -1,5 +1,4 @@
-<?php require_once $_SERVER["DOCUMENT_ROOT"] . "/VillaDonq/helpers/type_user.php"; ?>
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/VillaDonq/routes/routes.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminLTE 3 | User Profile</title>
 
-    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
     <link rel="stylesheet" href="../../css/general_plantilla.css">

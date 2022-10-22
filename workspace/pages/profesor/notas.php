@@ -1,5 +1,4 @@
-<?php require_once $_SERVER["DOCUMENT_ROOT"] . "/VillaDonq/helpers/type_user.php"; ?>
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/VillaDonq/routes/routes.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

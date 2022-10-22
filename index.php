@@ -11,7 +11,6 @@
 </head>  
 
 <body>
-<?php $rute = "" ?>
 
 
     <?php
