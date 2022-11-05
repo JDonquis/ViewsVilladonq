@@ -158,6 +158,7 @@ fieldset {
 @-webkit-keyframes opacity_1 {
   to {
     opacity: 1;
+    visibility: visible !important;
   }
 }
 @keyframes opacity_1 {
@@ -550,4 +551,11 @@ a.active {
 }
 .add_btn:before {
   content: "+ AGREGAR";
-}/*# sourceMappingURL=general_plantilla.css.map */
+}
+.opacity-0 {
+  opacity: 0;
+}
+.width-0 {
+  width: 0;
+}
+/*# sourceMappingURL=general_plantilla.css.map */

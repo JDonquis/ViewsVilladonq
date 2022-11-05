@@ -82,6 +82,7 @@ export function links_animation() {
 }
 
 // transitions of objects
+    // animation_type could be : topToDown, leftToRight, opacity1, width_0 
 export function transitionsElements(object, animation_type, delay = 0, duration = 1) {
   let obj = d.querySelectorAll(object);
   if (obj.length > 1) {

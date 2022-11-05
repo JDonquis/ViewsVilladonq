@@ -721,6 +721,7 @@ body, html {
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: repeat(1, calc(100vh - 90x));
+    min-height: 80vh;
   }
 }
 @media (min-width: 1060px) {
@@ -865,7 +866,7 @@ body, html {
 }
 .cont_h1_and_form form.inscribe .card_form fieldset {
   transition: 0.4s all ease;
-  height: 100%;
+  /*height: 100%;*/
 }
 .cont_h1_and_form form.inscribe .card_form fieldset label {
   transform: translateX(10px);
@@ -920,10 +921,8 @@ body, html {
 }
 .cont_h1_and_form form.inscribe .arrow_buttons .next {
   font-size: 18px !important;
-  -webkit-clip-path: polygon(0 21%, 72% 20%, 100% 50%, 73% 80%, 0 80%);
-          clip-path: polygon(0 21%, 72% 20%, 100% 50%, 73% 80%, 0 80%);
   background: #21e6c1 !important;
-  padding: 20px 30px 20px 10px;
+  padding: 10px 20px 10px 20px;
   color: #081f3d;
   font-weight: bold;
 }

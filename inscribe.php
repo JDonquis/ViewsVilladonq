@@ -1,3 +1,7 @@
+<style type="text/css">
+    
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,14 +27,39 @@
         <div class="h1_cont">
             <h1>Inscribete en VILLADONQ y recibe la mejor educación</h1>
         </div>
+        <!-- check ci and year cupo -->
+        <form class="inscribe">
+            <div class="card_form" >
+                <fieldset>
+                    <legend>INGRESA LOS SIGUIENTES DATOS PARA COMENZAR LA INSCRIPCIÓN:</legend>
+                        
+                            <span>
+                                <input type="text" data-type="CI" id="ins_ci" pattern="[A-Za-z]{1}[0-9]{8}" title="Debe escribir una letra 'V' seguida de 8 números" name="ins_ci">
+                                <label for="ins_ci">CI: </label>
+                            </span>
+                         
+                        <label for="ins_type_new">Selecciona un cupo disponible: </label>
+                            <div id="new_inscri_section">
+                                <select name="years_available" id="">
+                                    <option value="">1er año</option>
+                                    <option value="">2do año</option>
+                                    <option value="">4to año</option>
+                                </select>
+                            </div>
+                        
+                <button class="btn_submit mt-0" type="button">Siguiente</button>
+                </fieldset>
+            </div>
+        </form>
 
-        <form class="inscribe" id="form-file" action="" method="POST" enctype="multipart/form-data">
+
+        <form class="inscribe d-none" id="form-file" action="" method="POST" enctype="multipart/form-data">
             <?php if (isset($_GET['fail-size'])) { ?>
 
                 <div class="message-fail-size">Tamaño de archivo no permitido. Procure que sean menor de 2MB</div>
 
             <?php } ?>
-
+           
             <div class="card_form slider opacity_effect_each">
                 <!-- <ul class="nav_slider">
                 </ul>  -->
@@ -38,47 +67,7 @@
                     <div></div>
                 </div>
                 <div class="slider_wrap">
-                <fieldset class="each_slider_element">
-                        <legend>INSCRIBIRME EN:</legend>
-                        <div class="d-grid">
-                            <div id="">
-                                <input type="radio" id="ins_type_new" name="type_inscri">
-                                <label for="ins_type_new">Nuevo año escolar: </label>
-                                <div id="new_inscri_section">
-                                    <select name="years_available" id="">
-                                        <option value="">1er año</option>
-                                        <option value="">2do año</option>
-                                        <option value="">4to año</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="d-grid">
-                            <div>
-                                <input type="radio" id="ins_type_middle" name="type_inscri">
-                                <!-- <label for="ins_type_middle">Momento: </label> -->
-                                <div id="new_inscri_section">
-                                <!-- <div id="new_inscri_section">
-                                    <select name="years_available" id="">
-                                        <option value="">1er año</option>
-                                        <option value="">2do año</option>
-                                        <option value="">4to año</option>
-                                    </select>
-                                </div>
-                                    <select name="years_available" id="">
-                                        <option value="">Primero</option>
-                                        <option value="">Segundo</option>
-                                        <option value="">Tercero</option>
-                                    </select>
-                                </div> -->
-                            </div>
-                            
-                        </div>
-               
-
-
-                    </fieldset>
+              
 
                     <fieldset class="each_slider_element">
                         <legend>DATOS PERSONALES</legend>

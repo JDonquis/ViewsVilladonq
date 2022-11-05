@@ -7,6 +7,7 @@
 import loader_screen from "../functions/loader_screen.js";
 
 import { openModalDown,links_animation,transitionsElements }from "../functions/animations.js";
+console.log('jsjsjsjss')
 
 const d = document;
 

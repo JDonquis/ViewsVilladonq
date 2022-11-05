@@ -5,8 +5,8 @@
 
             <a href="/VillaDonq/index.php" class="transition_link">
                 <picture class="logo transition_link">
-                    <source media="(min-width: 700px)" srcset="<?php echo $rute ?>img/logo_small.png" class="transition_link">
-                    <img src="<?php echo $rute ?>img/logo.png" alt="" class="transition_link">
+                    <source media="(min-width: 700px)" srcset="img/logo_small.png" class="transition_link">
+                    <img src="img/logo.png" alt="" class="transition_link">
                 </picture>
             </a>
             <div class="nav-section">

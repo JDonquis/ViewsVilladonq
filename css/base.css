@@ -165,7 +165,9 @@ fieldset {
     opacity: 1;
   }
 }
-
+.width-0 {
+  width: 0 !important;
+}
 .width_0 {
   width: 0%;
   -webkit-animation: width_0 2s ease;
@@ -302,6 +304,7 @@ fieldset {
   }
 }
 
+
 .d-none {
-  display: none;
+  display: none !important;
 }/*# sourceMappingURL=base.css.map */
