@@ -22,6 +22,7 @@
     require_once('includes/_form-login.php');
     ?>
 
+    hola
 
     <div class="cont_h1_and_form">
         <div class="h1_cont">
