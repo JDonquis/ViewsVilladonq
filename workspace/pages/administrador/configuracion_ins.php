@@ -48,7 +48,7 @@
                     <h2 class="h3">Periodo de inscripción nuevo año escolar 2023</h2>
                     <div class="form-group">
                  
-                    <div class="d-flex ">
+                    <div class="d-md-flex ">
                         <!-- <label> Inicio
                             <input class="d-block" type="date">
                         </label>
@@ -61,24 +61,27 @@
                                 <input min="" max="" class="start form-control" type="date" name="start">
                             </label>
                         </div>
-                        <div class="form-group ml-3">
+                        <div class="form-group ml-md-3">
                             <label>Fin:
                                 <input disabled="true" min="" max="" class="end form-control" type="date" name="end">
                             </label>
                         </div>
 <span class="parent_btn_submit ">
-                <input title='Ctrl + s' type="submit" name="save-date" value="Guardar fecha" class="btn_submit mt-4 ml-3 opacity-0 p-2" id="date_btn"></span>
+                <input title='Ctrl + s' type="submit" name="save-date" value="Guardar fecha" class="btn_submit mt-4 ml-3 d-none p-2" id="date_btn"></span>
                     </div>
 
-            <div class="card col-md-9">
+
+<!-- start cupos *********************************************************************************************************************************************************************************************** -->
+<form class="row">
+    <div class="col-md-8">
+        <div class="card">
 
               <div class="card-header pb-0">
-                <h3 class="mt-3 card-title mt-2  float-left">Cupos</h3>
-                
+                <h3 class="mt-3 card-title mt-1 mb-3  float-left">Cupos</h3>         
               </div>
               <!-- /.card-header -->
-              <div class="card-body ">
-                <table class="table table-bordered cupos">
+              <div class="card-body table-responsive p-0">
+                <table class=" table table-head-fixed text-nowrap table-bordered cupos">
                   <thead>
                     <tr>
                       <th style="">Año escolar</th>
@@ -176,16 +179,19 @@
 
                 </table>
                 <span class="parent_btn_submit">
-                <input title='Ctrl + s' type="submit" name="save-plan" value="Guardar cupos" class="btn_submit opacity-0 mt-2" id="cupos_btn"></span>
+                <input title='Ctrl + s' type="submit" name="save-plan" value="Guardar cupos" class="btn_submit d-none mt-2" id="cupos_btn"></span>
                                         
               </div>
               <!-- /.card-body -->
-            </div>
+        </div>
+    </div>
+</form>
+            
 
 
 <!--start docs *****************************************************************************************************************************************************************************************+ -->
              <form class="row  row_table_plan" id="plan-form">
-                        <div class="col-12">
+                        <div class="col-md-10">
                             <div class="card parent_pdf">
                                 <div class="card-header">
                                     <div class="form-group float-left mt-2 move_hist_btns">
@@ -197,12 +203,12 @@
 
                                     <div class="card-tools ">
                                         <span class="parent_btn_submit">
-                                        <input title='Ctrl + s' type="submit" name="save-plan" value="GUARDAR" class="btn_submit mt-0" id="save-form"></span>
+                                        <input title='Ctrl + s' type="submit" name="save-plan" value="GUARDAR" class="btn_submit opacity-0 mt-0" id="docs_btn"></span>
                                     </div>
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body table-responsive p-0" style="max-height: 700px;">
-                                    <table id="table_docs" class="asist_table table table-head-fixed text-nowrap table-bordered">
+                                    <table id="table_docs" class=" table table-head-fixed text-nowrap table-bordered">
                                         <thead>
                                             <tr>
                                                 <th class="th_unidad"> # </th>
@@ -219,7 +225,7 @@
                                                     1
                                                 </td>
                                                 <td class="p-0 each_cell"><textarea
-                                                        name="tema1">Nomenclatura y orden que se le da a los seres vivos</textarea></td>
+                                                        name="tema1">Constancia de que no ha matado a nadie</textarea></td>
                                                 <td class="text-center align-middle each_cell">
                                                     <div class="form-group">
                                                     <div class="custom-control custom-switch">
@@ -247,7 +253,7 @@
                                         <tfoot>
                                             <tr>
                                                 <td class="btn_more" title="Agregar nueva  (ctrl + enter)">
-                                                    <i class="fa-solid fa-plus"></i> Nueva unidad
+                                                    <i class="fa-solid fa-plus"></i> Nuevo documento
                                                 </td>
                                             </tr>
 
@@ -330,6 +336,7 @@
             if (inp_start.value >= inp_end.value) {
                 inp_end.value = inp_start.value
             }
+            submit_date.classList.remove('d-none')
             submit_date.classList.add('opacity_1')
         }
 
@@ -357,6 +364,7 @@
             }
 
             progress.style.width = `${getPercent(asig_val, acep_val)}%`
+            submit_cupos.classList.remove('d-none')
             submit_cupos.classList.add('opacity_1')
 
 
@@ -368,6 +376,7 @@
 
 
         /// ***** star documents table config *************************************************************************
+        const submit_docs = document.querySelector('#docs_btn')
         let table_docs = document.querySelector('#table_docs')
         let all_row = table_docs.querySelectorAll('tbody tr')
         let tbody = table_docs.querySelector("tbody")
@@ -504,16 +513,30 @@
             if (now > 19) history.shift()
             now = history.length - 1
             past_btn.classList.remove('disabled')
-            if (now < 1) past_btn.classList.add('disabled')
+            if (now < 1) {
+                past_btn.classList.add('disabled')
+
+            } else {
+                submit_date.classList.remove('d-none')
+                submit_docs.classList.add('opacity_1')
+
+            }
+
         }
         getData()
 
         const goBack = () => {
             if (now > 0) {
                 moveHist(history[--now])
+
                 future_btn.classList.remove('disabled')
             }
-            if (now == 0) past_btn.classList.add('disabled')
+            if (now == 0) {
+                past_btn.classList.add('disabled')
+                submit_date.classList.add('d-none')
+                submit_docs.classList.remove('opacity_1')
+
+            }
         }
 
         const goNext = () => {
