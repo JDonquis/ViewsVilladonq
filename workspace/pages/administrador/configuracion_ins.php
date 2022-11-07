@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | User Profile</title>
+    <title>Configuración de inscripción</title>
     <!-- daterange picker -->
     <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.css">
@@ -48,7 +48,7 @@
                     <h2 class="h3">Periodo de inscripción nuevo año escolar 2023</h2>
                     <div class="form-group">
                  
-                    <div class="d-md-flex ">
+                    <form class="d-md-flex " id="date-form">
                         <!-- <label> Inicio
                             <input class="d-block" type="date">
                         </label>
@@ -56,7 +56,7 @@
                             <input class="d-block" type="date">
                         </label> -->
 
-                        <div class="form-group">
+                        <div class="form-group" >
                             <label>Inicio:
                                 <input min="" max="" class="start form-control" type="date" name="start">
                             </label>
@@ -66,9 +66,9 @@
                                 <input disabled="true" min="" max="" class="end form-control" type="date" name="end">
                             </label>
                         </div>
-<span class="parent_btn_submit ">
-                <input title='Ctrl + s' type="submit" name="save-date" value="Guardar fecha" class="btn_submit mt-4 ml-3 d-none p-2" id="date_btn"></span>
-                    </div>
+                        <span class="parent_btn_submit ">
+                        <input title='Ctrl + s' type="submit" name="save-date" value="Guardar fecha" class="btn_submit mt-4 ml-3 d-none p-2" id="date_btn"></span>
+                    </form>
 
 
 <!-- start cupos *********************************************************************************************************************************************************************************************** -->
@@ -329,16 +329,28 @@
         const inp_start = document.querySelector('.start')
         const inp_end = document.querySelector('.end')
 
-        inp_start.onchange = (e) => {
-            inp_end.min = inp_start.value
-            inp_end.disabled = false
-            submit_date.classList
-            if (inp_start.value >= inp_end.value) {
-                inp_end.value = inp_start.value
+        document.querySelector("#date-form").onchange = (e) => {
+            if (e.target == inp_start) {
+                inp_end.min = inp_start.value
+                inp_end.disabled = false
+
+                if (inp_start.value >= inp_end.value) {
+                    inp_end.value = inp_start.value
+                }
             }
+
             submit_date.classList.remove('d-none')
             submit_date.classList.add('opacity_1')
+
         }
+        if (inp_start.value.length > 0  ) {
+            inp_start.disabled = true
+            inp_end.disabled = false
+        }
+        // inp_start.onchange = (e) => {
+
+
+        // }
 
 
 

@@ -22,7 +22,14 @@
               Materias
             </p>
           </a>
+          <li class="nav-item">
+          <a href="../administrador/Secciones.php" class="nav-link">
+            <p>
+              Secciones
+            </p>
+          </a>
 
+        </li>
         </li>
         <li class="nav-item">
             <a href="#" class="nav-link">
