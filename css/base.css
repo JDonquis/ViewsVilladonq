@@ -1,5 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap");
-/* colores */
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../fonts/EncodeSansSemiExpanded-bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../fonts/EncodeSansSemiExpanded-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../fonts/EncodeSansSemiExpanded-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../fonts/EncodeSansSemiExpanded-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../fonts/EncodeSansSemiExpanded-Light.ttf");
+  font-weight: 300;
+}
+
 .full-screen {
   position: fixed;
   width: 100%;
@@ -56,7 +80,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Libre Baskerville", serif;
+  font-family: "Encode Sans SemiExpanded", serif;
 }
 h1 *,
 h2 *,
@@ -64,7 +88,7 @@ h3 *,
 h4 *,
 h5 *,
 h6 * {
-  font-family: "Libre Baskerville", serif;
+  font-family: "Encode Sans SemiExpanded", serif;
 }
 
 input {
@@ -162,7 +186,7 @@ fieldset {
 }
 @keyframes opacity_1 {
   to {
-    opacity: 1;
+    opacity:  1;
   }
 }
 .width-0 {
@@ -307,4 +331,4 @@ fieldset {
 
 .d-none {
   display: none !important;
-}/*# sourceMappingURL=base.css.map */
+}

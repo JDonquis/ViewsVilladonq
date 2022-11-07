@@ -20,9 +20,8 @@
 <div class="wrapper">
 
   <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-  </div>
+  
+  <?php  require_once "../includes/_loader.php"; ?>
 
   <!-- Navbar -->
 
@@ -161,6 +160,6 @@
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
-
+<!-- <script type="module" src="../js/functions/loader_screen.js"></script> -->
 </body>
 </html>

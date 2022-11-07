@@ -15,6 +15,7 @@
 
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
+        <?php require_once "../../../includes/_loader.php"; ?>
         <!-- Navbar -->
         <?php require_once "../../sections/_nav-bar.php"; ?>
         <!-- /.navbar -->

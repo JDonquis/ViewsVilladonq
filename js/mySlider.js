@@ -17,6 +17,7 @@ let opacity_effect_each = false;
 let automatic_move = false; 
 let fade_effect = false;
 let zoom_effect_each = false;
+let type_form = true
 
 slider_wrap.style.gridTemplateColumns = `repeat(${n_sliders}, ${100 / per_view}%)`
 
@@ -82,6 +83,7 @@ if (slider_parent.classList.contains('fade_effect')) fade_effect = true;
 if (slider_parent.classList.contains('zoom_effect')) zoom_effect_each = true
 if (slider_parent.classList.contains('auto')) automatic_move = true
 if (slider_parent.classList.contains('opacity_effect_each'))  opacity_effect_each = true
+if (slider_parent.classList.contains('type_form'))  type_form = true
 
 
 function translate(direction, times = 1) {
@@ -176,4 +178,17 @@ if (automatic_move== true) {
         if (active_slider == n_sliders-1) active_slider = -1
         translate('>', active_slider+1)
     }, 5000);
+}
+
+
+//change to the focused input
+// console.log(slider_wrap)
+if (type_form == true){
+    each_slider.forEach((el,i) => {
+        el.addEventListener('focusin', (e) => {
+            if (active_slider != i ) {
+                i > active_slider ? translate('>', i) : translate('<', i)
+            }
+        })
+    })
 }

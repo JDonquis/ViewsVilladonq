@@ -499,7 +499,7 @@ fieldset {
 .slider .slider_wrap {
   display: grid;
   transition: all 0.3s;
-  overflow-x: scroll;
+  overflow-x: hidden !important; 
   scroll-behavior: smooth;
   width: 100%;
   gap: 0;

@@ -43,7 +43,7 @@ else {
 
 
   <div class="wrapper">
-
+    <?php require_once "../includes/_loader.php";?>
     <!-- Navbar -->
     <?php include_once "./sections/_nav-bar.php"; ?>
     <!-- /.navbar -->

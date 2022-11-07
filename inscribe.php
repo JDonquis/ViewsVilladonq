@@ -27,7 +27,7 @@
             <h1>Inscribete en VILLADONQ y recibe la mejor educación</h1>
         </div>
         <!-- check ci and year cupo -->
-        <form class="inscribe">
+<!--         <form class="inscribe">
             <div class="card_form" >
                 <fieldset>
                     <legend>INGRESA LOS SIGUIENTES DATOS PARA COMENZAR LA INSCRIPCIÓN:</legend>
@@ -49,10 +49,10 @@
                 <button class="btn_submit mt-0" type="button">Siguiente</button>
                 </fieldset>
             </div>
-        </form>
+        </form> -->
 
 
-        <form class="inscribe d-none" id="form-file" action="" method="POST" enctype="multipart/form-data">
+        <form class="inscribe" id="form-file" action="" method="POST" enctype="multipart/form-data">
             <?php if (isset($_GET['fail-size'])) { ?>
 
                 <div class="message-fail-size">Tamaño de archivo no permitido. Procure que sean menor de 2MB</div>
@@ -65,14 +65,14 @@
                 <div class="progress_bar">
                     <div></div>
                 </div>
-                <div class="slider_wrap">
+                <div class="slider_wrap ">
               
 
                     <fieldset class="each_slider_element">
                         <legend>DATOS PERSONALES</legend>
                         <div class="d-grid">
                             <span>
-                                <input type="text" id="ins_nombres" name="name_s">
+                                <input type="text" value="Pepito" id="ins_nombres" name="name_s">
                                 <label for="ins_nombres">Nombres: </label>
                             </span>
                             <span>
@@ -177,40 +177,9 @@
 
 </body>
 
-<!-- jQuery -->
-<script src="./workspace/plugins/jquery/jquery.min.js"></script>
-
 <script src="./js/modules/inscribe.js" type="module"></script>
 
 <script src="js/functions/form_functions.js"></script>
-
-<script>
-    const date_input = document.querySelector("#ins_date_birth")
-    const age_input = document.querySelector("#ins_edad")
-
-    let fecha = new Date(),
-        añoA = fecha.getFullYear(),
-        mesA = fecha.getMonth() + 1,
-        diaA = fecha.getDate();
-
-    function calculateAge(_nacimiento) {
-        let n = 0;
-        let añoN, mesN, diaN;
-        [añoN, mesN, diaN] = _nacimiento.split('-')
-
-        n = +añoA - +añoN
-        if ((mesA < mesN) || ((mesA == mesN) && (diaA < diaN))) n--
-
-        return n
-    }
-    date_input.onchange = () => {
-        if (date_input.value) {
-            age_input.value = calculateAge(date_input.value)
-            age_input.nextElementSibling.classList.add('focus_valid')
-        }
-
-    }
-</script>
 
 <script src="js/mySlider.js"></script>
 
