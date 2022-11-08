@@ -1,0 +1,130 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Encode+Sans+Semi+Expanded:wght@300;400;600;700&display=swap');
+* {
+box-sizing: border-box;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+		font-family: "Comfortaa", cursive;
+		color: black;
+}
+	.card{
+		width: 90%;
+		max-width: 450px;
+		background-color: #081f3d;
+		color: white;
+		position: relative; 
+		overflow: hidden;
+		height: 300px;
+		padding: 0 20px 20px 20px;
+		z-index: 400 !important;
+		box-shadow: -1px 11px 8px -9px rgba(0,0,0,0.84);
+-webkit-box-shadow: -1px 11px 8px -9px rgba(0,0,0,0.84);
+-moz-box-shadow: -1px 11px 8px -9px rgba(0,0,0,0.84);
+	}
+	.card:before {
+		content: "";
+		position: absolute;
+		width: 61%;
+		height: 3px;
+		background: #278ea5;
+		top: -3px;
+		left: -3px;
+		rotate: 33deg;
+		transform-origin: left;
+	}
+	.card:after {
+		content: "";
+		position: absolute;
+		width: 61%;
+		height: 3px;
+		background: #278ea5;
+		top: -3px;
+		right: -3px;
+		rotate: 327deg;
+		transform-origin: right;
+	}
+	.name_and_logo {
+		display: flex;
+		justify-content: center;
+		align-items: end;
+		height: 120px;
+		z-index: 100 !important;
+	}
+	#text {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-start;
+		height: 150px;
+	}
+	#text h1 {
+		margin-bottom: 0px;
+		font-size: 16px;
+		font-weight: 400;
+		font-family: 'Encode Sans Semi Expanded', sans-serif;
+	}
+	.doc {
+		background: rgba(39, 142, 165, 0.21);
+		width: 95%;
+		max-width: 800px;
+		height: 800px;
+		position: relative;
+		top: -100px;
+		z-index: 0;
+		text-align: justify;
+		padding: 150px 70px 70px 70px;
+	}
+	
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	
+		
+			<div class="card">
+				<div class="name_and_logo">
+					
+						<!-- <p id="insti_name">VillaDonq</p> -->
+						<img src="../../img/logo.png" class="icon">
+						
+				</div>
+				<div id="text">
+					<h1>Para <b id="name_person">Javier Juliao</b> <br>
+					Resultado de su solicitud enviada el día <time>08/11/2022</time></h1>
+				</div>
+			</div>
+				<div class="doc">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis <b>nostrud exercitation ullamco</b> laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<div>
+
+		
+		
+</body>
+</html>
+

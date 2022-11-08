@@ -23,7 +23,32 @@
   src: url("../fonts/EncodeSansSemiExpanded-Light.ttf");
   font-weight: 300;
 }
-
+// *****************************************++
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../fonts/Comfortaa-bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../fonts/Comfortaa-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../fonts/Comfortaa-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../fonts/Comfortaa-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../fonts/Comfortaa-Light.ttf");
+}
+  
 $bigFont: clamp(28px, 6vw, 60px);
 
 /* colores */
@@ -70,7 +95,7 @@ $color-red: rgb(139, 0, 0);
   color: inherit;
   padding: 0;
   color: white;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Comfortaa", sans-serif;
 }
 body {
   background: $color1;
