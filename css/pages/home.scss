@@ -1,8 +1,8 @@
-@import '../base';
-@import '../layouts/_nav';
-@import '../_components';
-@import '../layouts/_login'; 
-@import '../mySlider';
+@import '../base.scss';
+@import '../layouts/_nav.scss';
+@import '../_components.scss';
+@import '../layouts/_login.scss'; 
+@import '../mySlider.scss';
 
 h1 { 
     margin-block: 25px;
@@ -15,7 +15,7 @@ h1 {
     }       
     span {
         background: $color2;   
-    }
+    } 
 }
 .parent_inscribe_link {
     position: absolute;
@@ -53,25 +53,25 @@ h1 {
     height: $size_square;
     width: $size_square;
     position: relative;               
-    &:after {
-        box-sizing: border-box;   
-        content: '';
-        position: absolute;
-        width: calc($size_square + 45px);
-        height: calc($size_square + 45px);
-        border-radius: 50%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);  
-        border: 1px solid $color3;
+    // &:after {
+    //     box-sizing: border-box;   
+    //     content: '';
+    //     position: absolute;
+    //     width: calc(#{$size_square} + 45px);
+    //     height: calc(#{$size_square} + 45px);
+    //     border-radius: 50%;
+    //     left: 50%;
+    //     top: 50%;
+    //     transform: translate(-50%, -50%);  
+    //     border: 1px solid $color3;
 
-    } 
+    // } 
     &:before {
         box-sizing: border-box;
         content: '';
         position: absolute;
-        width: calc($size_square + 21px);
-        height: calc($size_square + 21px);
+        width: calc(#{$size_square} + 29px);
+        height: calc(#{$size_square} + 29px);
         border-radius: 50%;
         left: 50%;
         top: 50%;

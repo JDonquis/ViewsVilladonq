@@ -65,7 +65,7 @@
                 <div class="progress_bar">
                     <div></div>
                 </div>
-                <div class="slider_wrap ">
+                <div class="slider_wrap">
               
 
                     <fieldset class="each_slider_element">

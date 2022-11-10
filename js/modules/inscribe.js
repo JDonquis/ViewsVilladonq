@@ -5,7 +5,6 @@
 */
 import loader_screen from "../functions/loader_screen.js";
 import file_validation from "../functions/f_size_validation.js"
-import send_data from "../functions/send_data_form.js";
 import 
 {	
 	openModalDown,
@@ -53,7 +52,6 @@ d.addEventListener("DOMContentLoaded",e=>
 	transitionsElements(".progress_bar ", "leftToRight", .5)
 
 	links_animation();
-	send_data("#form-file"); 
 })
 
 

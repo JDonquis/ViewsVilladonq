@@ -1,5 +1,46 @@
 @import "../../css/base";
 @import "../../css/_components";
+
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../../css/fonts/EncodeSansSemiExpanded-bold.ttf");
+  font-weight: 700; }
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../../css/fonts/EncodeSansSemiExpanded-SemiBold.ttf");
+  font-weight: 600; }
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../../css/fonts/EncodeSansSemiExpanded-Medium.ttf");
+  font-weight: 500; }
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../../css/fonts/EncodeSansSemiExpanded-Regular.ttf");
+  font-weight: 400; }
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../../css/fonts/EncodeSansSemiExpanded-Light.ttf");
+  font-weight: 300; }
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../css/fonts/Comfortaa-bold.ttf");
+  font-weight: 700; }
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../css/fonts/Comfortaa-SemiBold.ttf");
+  font-weight: 600; }
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../css/fonts/Comfortaa-Medium.ttf");
+  font-weight: 500; }
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../css/fonts/Comfortaa-Regular.ttf");
+  font-weight: 400; }
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../css/fonts/Comfortaa-Light.ttf"); }
+
 * {
   color: inherit;
 }
@@ -10,7 +51,7 @@ section.content, content-wrapper{
   padding-bottom: 40px !important ; 
 }
 .main-sidebar {
-  background-color: $color1 !important;
+  background-color: $color1 !important; 
 }
 p {
   margin-bottom: 0 !important;
@@ -53,7 +94,7 @@ a.active {
 .bg-2 {
   background-color: $color2 !important; 
   color: white !important;
-}
+} 
 .bg-3 {
   background-color: $color3 !important; 
 }
@@ -89,7 +130,7 @@ a.active {
     background-color: $color1;
     color: $color4;
   }
-  &:before {
-    content: '+ AGREGAR';
-  }
+  // &:before {
+  //   content: '+ AGREGAR';
+  // }
 }

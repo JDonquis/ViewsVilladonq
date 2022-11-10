@@ -2,7 +2,7 @@
   font-family: "Encode Sans SemiExpanded";
   src: url("../fonts/EncodeSansSemiExpanded-bold.ttf");
   font-weight: 700;
-}
+} 
 @font-face {
   font-family: "Encode Sans SemiExpanded";
   src: url("../fonts/EncodeSansSemiExpanded-SemiBold.ttf");
@@ -95,7 +95,7 @@ $color-red: rgb(139, 0, 0);
   color: inherit;
   padding: 0;
   color: white;
-  font-family: "Comfortaa", sans-serif;
+  font-family: "Comfortaa", sans-serif ;
 }
 body {
   background: $color1;
@@ -233,7 +233,7 @@ fieldset {
     }
   }
   .shadowsLoader {
-    width: max(300px, 50%);
+    width: #{"max(300px, 50%)"}; 
     height: 360px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);

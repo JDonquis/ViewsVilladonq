@@ -17,7 +17,7 @@ let opacity_effect_each = false;
 let automatic_move = false; 
 let fade_effect = false;
 let zoom_effect_each = false;
-let type_form = true
+let type_form = true;
 
 slider_wrap.style.gridTemplateColumns = `repeat(${n_sliders}, ${100 / per_view}%)`
 

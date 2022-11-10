@@ -13,7 +13,7 @@ body, html {
         grid-template-columns: 40% 60%;      
         grid-template-rows: repeat(1, calc(100vh - $nav_height));
         
-    } 
+    }  
     @media (min-width: 1060px) { 
         grid-template-columns: 50% 50%;
     }
@@ -58,7 +58,7 @@ body, html {
             }
         }
         
-        @include card-form('', min(85%, 450px));     
+        @include card-form('', calc(min(85%, 450px)));     
   
         .card_form {
             overflow: hidden;   
@@ -136,10 +136,11 @@ body, html {
  
             .next {
                 font-size: 18px !important;
-                clip-path: polygon(0 21%, 72% 20%, 100% 50%, 73% 80%, 0 80%); 
+                // clip-path: polygon(0 21%, 72% 20%, 100% 50%, 73% 80%, 0 80%); 
                 background: $color4  !important;
-                padding: 20px 30px 20px 10px;
+                padding: 9px 10px;
                 color: $color1;
+                text-align: center;
                 font-weight: bold;
                 // position: absolute;
                 // bottom: $padding_card_form;
@@ -165,4 +166,8 @@ body, html {
         }
     }
 
+}
+
+.slider_wrap {
+    overflow-x: hidden !important; 
 }

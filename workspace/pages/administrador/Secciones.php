@@ -14,6 +14,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
     <link rel="stylesheet" href="../../css/general_plantilla.css">
+    <link rel="stylesheet" href="../../css/materias.css">
 
     <title>Secciones</title>
 </head>
@@ -38,21 +39,12 @@
                         <div class="col-sm-8">
                             <!-- SELECT2 EXAMPLE -->
 
-                            <h1 class="m-0">Secciones</h1>
-
-                            <div class="row mt-2">
-
-                                <!-- /.col -->
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-
-                                        <button for='new_subject_name' class="add_btn"></button>
-                                        <!-- <input type="text" name="new_subject_name" id="new_subject_name"> -->
-                                    </div>
-                                </div>
-
-                                <!-- /.col -->
-                            </div>
+                            <h1 class="mb-3">Secciones</h1>
+                                <label for="aulas">aulas  <input type="number" class="d-inline form-control col-3 ml-2" name="" value="20" id="aulas"></label>
+                               
+                                <p>Secciones: <b>19</b></p>
+                                <p>Aulas libres: 1</p>
+                               
                         </div>
 
                     </div>
@@ -60,191 +52,227 @@
             </section>
 
             <!-- Main content -->
+           <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
+                    <div id="accordion">
+                        <article class="card">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0 color-primary">
+                                        1 - Primer año
+                                    </h5>
+                                    <p class="color-primary mb-0">Nro de secciones: <b>1</b></p>
+                                    <p class="color-primary mb-0">Cantidad de estudiantes: <b>300</b></p>
+                                </div>
+                            </button>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card"  style='max-width: 620px'>
-                                <div class="card-header"></div>
-                                <div class="card-body table-responsive p-0" >
-                                    <table class="table-head-fixed table table-striped table-bordered">
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingThree"
+
+                                data-parent="#accordion">
+                                <div class="form-group">
+                                        <button for='new_subject_name' class="mx-auto d-block add_btn">+ Crear sección</button>
+                                        
+                                    </div>
+                                <div class="card-body table-responsive">
+                                    
+                                    <table id="table-1A" class="table display table-head-fixed text-nowrap table-striped table-bordered">
                                         <thead>
                                             <tr>
-                                                <th>Materias (14)</th>
-                                                <th>Años</th>
-                                                <th>Acción</th>
-                                                <th>Profesores</th>
+                                                <th>Nombres </th>
+                                                <th>Apellidos</th>
+                                                <th>Foto</th>
+                                                <th>Cedula</th>
+                                                <th>Edad</th>
+                                                <th>Tel del representante</th>
+                                                <th>correo</th>
+
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td class="subject">Biología</td>
-                                                <td class="years">
-                                                    <ul class="text-center row">
-                                                        <span class="col ">-</span><span class="col">-</span><span class="col">3</span><span class="col ">4</span><span class="col ">5</span>
-                                                    </ul>
-                                                </td>
-                                                <td class="action"><i class="fas fa-edit"></i> -- X</td>
-                                                <td></td>
+                                                <td>Juan Francisco</td>
+                                                <td>Villasmil Tovar</td>
+                                                <td><a href="#">ver foto</a></td>
+                                                <td>27253194</td>
+                                                <td>22</td>
+                                                <td>0426037352</td>
+                                                <td>juanvillans16@gmail.com</td>
                                             </tr>
                                             <tr>
-                                                <td class="subject">Mátematica</td>
-                                                <td class="years">
-                                                    <ul class="text-center row">
-                                                        <span class="col">1</span><span class="col">2</span><span class="col">3</span><span class="col">4</span><span class="col">5</span>
-                                                    </ul>
-                                                </td>
-                                                <td class="action"><i class="fas fa-edit"></i> -- X</td>
-                                                <td></td>
+                                                <td>Dalexer noseque</td>
+                                                <td>Colina Ramirez</td>
+                                                <td><a href="#">ver foto</a></td>
+                                                <td>29342184</td>
+                                                <td>20</td>
+                                                <td>0212438719</td>
+                                                <td>dalexercivirigua@gmail.com</td>
                                             </tr>
                                             <tr>
-                                                <td class="subject">Inglés y Otras Lenguas Extranjeras</td>
-                                                <td class="years">
-                                                    <ul class="text-center row">
-                                                        <span class="col">1</span><span class="col">2</span><span class="col">3</span><span class="col">4</span><span class="col">5</span>
-                                                    </ul>
-                                                </td>
-                                                <td class="action"><i class="fas fa-edit"></i> -- X</td>
-                                                <td class="teachers">
-                                                    <ul >
-                                                        <li>D. Matheus (1, 2, 3), </li>
-                                                        <li>J. Cristina (4, 5), </li>
-                                                        <li>D. Matheus (1, 2, 3)</li>
-                                                    </ul>
-                                                </td>
+                                                <td>Juan Diego</td>
+                                                <td>Donquis Gonzales</td>
+                                                <td><a href="#">ver foto</a></td>
+                                                <td>30101010</td>
+                                                <td>15</td>
+                                                <td>0269356969</td>
+                                                <td>mondonquis@gmail.com</td>
                                             </tr>
-                                            <tr>
-                                                <td class="subject">Castellano</td>
-                                                <td class="years">
-                                                    <ul class="text-center row">
-                                                        <span class="col">1</span><span class="col">2</span><span class="col">3</span><span class="col">4</span><span class="col">5</span>
-                                                    </ul>
-                                                </td>
-                                                <td class="action"><i class="fas fa-edit"></i> -- X</td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="subject">Educación Física</td>
-                                                <td class="years">
-                                                    <ul class="text-center row">
-                                                        <span class="col">1</span><span class="col">2</span><span class="col">3</span><span class="col">4</span><span class="col">5</span>
-                                                    </ul>
-                                                </td>
-                                                <td class="action"><i class="fas fa-edit"></i> -- X</td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="subject">Física</td>
-                                                <td class="years">
-                                                    <ul class="text-center row">
-                                                        <span class="col">-</span><span class="col">-</span><span class="col">3</span><span class="col">4</span><span class="col">5</span>
-                                                    </ul>
-                                                </td>
-                                                <td class="action"><i class="fas fa-edit"></i> -- X</td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="subject">Química</td>
-                                                <td class="years">
-                                                    <ul class="text-center row">
-                                                        <span class="col">-</span><span class="col">-</span><span class="col">3</span><span class="col">4</span><span class="col">5</span>
-                                                    </ul>
-                                                </td>
-                                                <td class="action"><i class="fas fa-edit"></i> -- X</td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="subject">Ciencias Naturales</td>
-                                                <td class="years">
-                                                    <ul class="text-center row">
-                                                        <span class="col">1</span><span class="col">2</span><span class="col">-</span><span class="col">-</span><span class="col">-</span>
-                                                    </ul>
-                                                </td>
-                                                <td class="action"><i class="fas fa-edit"></i> -- X</td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="subject">Ciencias de la Tierra</td>
-                                                <td class="years">
-                                                    <ul class="text-center row">
-                                                        <span class="col">-</span><span class="col">-</span><span class="col">-</span><span class="col">-</span><span class="col">5</span>
-                                                    </ul>
-                                                </td>
-                                                <td class="action"><i class="fas fa-edit"></i> -- X</td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="subject">Orientación y Convivencia</td>
-                                                <td class="years">
-                                                    <ul class="text-center row">
-                                                        <span class="col">1</span><span class="col">2</span><span class="col">3</span><span class="col">4</span><span class="col">5</span>
-                                                    </ul>
-                                                </td>
-                                                <td class="action"><i class="fas fa-edit"></i> -- X</td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="subject">Geografía, Historia y ciudadanía</td>
-                                                <td class="years">
-                                                    <ul class="text-center row">
-                                                        <span class="col">1</span><span class="col">2</span><span class="col">3</span><span class="col">4</span><span class="col">5</span>
-                                                    </ul>
-                                                </td>
-                                                <td class="action"><i class="fas fa-edit"></i> -- X</td>
-                                                <td class="teachers">
-                                                    <ul >
-                                                        <li>H. Harrinson (1, 2, 3),</li>
-                                                        <li>D. Matheus (1, 2, 3) ,</li>
-                                                        <li>P. Cruzanda (2, 4),</li>
-                                                        <li>M. Hernandez (4, 5),</li>
-                                                        <li>J. Cristina (4, 5),</li>
-                                                        <li>J. Cristina (4, 5),</li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="subject">Arte y Patrimonio</td>
-                                                <td class="years">
-                                                    <ul class="text-center row">
-                                                        <span class="col">1</span><span class="col">2</span><span class="col">-</span><span class="col">-</span><span class="col">-</span>
-                                                    </ul>
-                                                </td>
-                                                <td class="action"><i class="fas fa-edit"></i> -- X</td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="subject"> Formación para la Soberanía Nacional</td>
-                                                <td class="years">
-                                                    <ul class="text-center row">
-                                                        <span class="col">-</span><span class="col">-</span><span class="col">-</span><span class="col">4</span><span class="col">5</span>
-                                                    </ul>
-                                                </td>
-                                                <td class="action"><i class="fas fa-edit"></i> -- X</td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="subject">Participación en Grupos de Creación, Recreación y Producción</td>
-                                                <td class="years">
-                                                    <ul class="text-center row">
-                                                        <span class="col">1</span><span class="col">2</span><span class="col">3</span><span class="col">4</span><span class="col">5</span>
-                                                    </ul>
-                                                </td>
-                                                <td class="action"><i class="fas fa-edit"></i> -- X</td>
-                                                <td></td>
-                                            </tr>
+
                                         </tbody>
+
                                     </table>
                                 </div>
-                                <!-- /.card-body -->
                             </div>
-                        </div>
-                    </div>
-                    <!-- /.card -->
+                        </article>
 
-                    <!-- /.row -->
+                     
+                        <article class="card">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0 color-primary">
+                                        2 - Segundo año año
+                                    </h5>
+                                    <p class="color-primary mb-0">Nro de secciones: <b>1</b></p>
+                                    <p class="color-primary mb-0">Cantidad de estudiantes: <b>300</b></p>
+                                </div>
+                            </button>
+
+                            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+
+                                data-parent="#accordion">
+                                <div class="form-group">
+
+                                        <button for='new_subject_name' class="mx-auto d-block add_btn">+ Crear sección</button>
+                                        
+                                    </div>
+                                <div class="card-body table-responsive">
+                                    
+                                    <table id="table-2A" class="display table table-head-fixed text-nowrap table-bordered">
+                                       <thead>
+                                            <tr>
+                                                <th>Nombres </th>
+                                                <th>Apellidos</th>
+                                                <th>Foto</th>
+                                                <th>Cedula</th>
+                                                <th>Edad</th>
+                                                <th>Tel del representante</th>
+                                                <th>correo</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Juan Francisco</td>
+                                                <td>Villasmil Tovar</td>
+                                                <td><a href="#">ver foto</a></td>
+                                                <td>27253194</td>
+                                                <td>22</td>
+                                                <td>0426037352</td>
+                                                <td>juanvillans16@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dalexer noseque</td>
+                                                <td>Colina Ramirez</td>
+                                                <td><a href="#">ver foto</a></td>
+                                                <td>29342184</td>
+                                                <td>20</td>
+                                                <td>0212438719</td>
+                                                <td>dalexercivirigua@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Juan Diego</td>
+                                                <td>Donquis Gonzales</td>
+                                                <td><a href="#">ver foto</a></td>
+                                                <td>30101010</td>
+                                                <td>15</td>
+                                                <td>0269356969</td>
+                                                <td>mondonquis@gmail.com</td>
+                                            </tr>
+
+                                        </tbody>
+
+
+                                    </table>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0 color-primary">
+                                        3 - Tercer año
+                                    </h5>
+                                    <p class="color-primary mb-0">Nro de secciones: <b>1</b></p>
+                                    <p class="color-primary mb-0">Cantidad de estudiantes: <b>300</b></p>
+                                </div>
+                            </button>
+
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+
+                                data-parent="#accordion">
+                                <div class="form-group">
+
+                                        <button for='new_subject_name' class="mx-auto d-block add_btn">+ Crear sección</button>
+                                        
+                                    </div>
+                                <div class="card-body table-responsive">
+                                    
+                                    <table id="table-3A" class="display table table-head-fixed text-nowrap table-bordered">
+                                       <thead>
+                                            <tr>
+                                                <th>Nombres </th>
+                                                <th>Apellidos</th>
+                                                <th>Foto</th>
+                                                <th>Cedula</th>
+                                                <th>Edad</th>
+                                                <th>Tel del representante</th>
+                                                <th>correo</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Juan Francisco</td>
+                                                <td>Villasmil Tovar</td>
+                                                <td><a href="#">ver foto</a></td>
+                                                <td>27253194</td>
+                                                <td>22</td>
+                                                <td>0426037352</td>
+                                                <td>juanvillans16@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dalexer noseque</td>
+                                                <td>Colina Ramirez</td>
+                                                <td><a href="#">ver foto</a></td>
+                                                <td>29342184</td>
+                                                <td>20</td>
+                                                <td>0212438719</td>
+                                                <td>dalexercivirigua@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Juan Diego</td>
+                                                <td>Donquis Gonzales</td>
+                                                <td><a href="#">ver foto</a></td>
+                                                <td>30101010</td>
+                                                <td>15</td>
+                                                <td>0269356969</td>
+                                                <td>mondonquis@gmail.com</td>
+                                            </tr>
+
+                                        </tbody>
+
+
+                                    </table>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
                 </div>
-                
             </section>
             <!-- /.content -->
         </div>
@@ -267,37 +295,25 @@
     <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  
     <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
     <script src="../../plugins/jszip/jszip.min.js"></script>
-    <script src="../../plugins/pdfmake/pdfmake.min.js"></script>
-    <script src="../../plugins/pdfmake/vfs_fonts.js"></script>
-    <script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-    <script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
-    <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
 
     <!-- AdminLTE App -->
     <script src="../../dist/js/adminlte.min.js"></script> -->
 
     <script>
-        $(function() {
-            $("table").DataTable({
-                "responsive": true,
-                "lengthChange": false,
-                "autoWidth": false,
-                'paging': false,
-                "ordering": true,
-                "buttons": ["excel", "pdf", "print", "colvis"],
-            }).buttons().container().prependTo('.dataTables_filter');
-
-        });
-        setTimeout(() => {
-            const dataTableHeader = document.querySelector("#DataTables_Table_0_filter.dataTables_filter")
-            const card_header = document.querySelector(".card-header").appendChild(dataTableHeader)
-        }, 100);
+    $(document).ready(function() {
+    $("table.display").DataTable( {
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": false,
+        'paging': false,
+        "ordering": true,
+    } );
+} );
     </script>
 
 </body>
