@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Configuración de inscripción</title>
     <!-- daterange picker -->
-    <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
+    <!-- <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css"> -->
     <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
     <link rel="stylesheet" href="../../css/general_plantilla.css">
-    <link rel="stylesheet" href="../../css/plan_evaluacion.css">
 
 </head>
 
@@ -422,7 +421,7 @@
         function adjustTextareaHight(t) {
             t.style.height = 'auto';
             let scrollH = t.scrollHeight;
-            t.style.height = `${scrollH}px`;
+            t.style.height = `calc(${scrollH}px + 12px )`;
             allow = true
         }
         textareasFuctions(true)
@@ -472,14 +471,21 @@
 
         }
 
-        // focus textarea when click in its td
+           // focus textarea when click in its td
         function focusWithClick() {
             document.querySelectorAll(".each_cell").forEach(td => {
                 td.onclick = () => {
-                    td.children[0].focus()
+                    const texta = td.querySelector('textarea')
+                    if (texta) {
+                        const texta_len = texta.value.length
+                        texta.setSelectionRange(texta_len, texta_len)
+                        texta.focus()
+                        
+                    }
                 }
             })
         }
+        focusWithClick()
 
         // delete row
         function deleteRow() {
@@ -509,7 +515,7 @@
             })
             $("#N_uni")[0].value = n_unidades;
         }
-
+        deleteRow()
         // save data for then go back or next
 
         let history = []

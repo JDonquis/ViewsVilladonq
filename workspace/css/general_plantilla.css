@@ -428,4 +428,59 @@ a.active {
     background-color: #081f3d;
     color: #21e6c1; }
 
+.row_table_plan {
+  position: relative;
+  padding-bottom: 100px; }
+  .row_table_plan tr {
+    transition: all .2s; }
+  .row_table_plan tr.removing {
+    height: 0px;
+    opacity: 0;
+    transform: translateY(-20px); }
+  .row_table_plan .td_valor, .row_table_plan td.borrar {
+    width: 65px !important;
+    min-width: 65px !important; }
+  .row_table_plan td.borrar i:hover {
+    cursor: pointer;
+    color: #21e6c1; }
+  .row_table_plan .td_unidad, .row_table_plan .th_unidad {
+    width: 95px;
+    padding-left: 14px !important; }
+  .row_table_plan .each_cell {
+    padding: 0;
+    min-width: 200px; }
+    @media (min-width: 500px) {
+      .row_table_plan .each_cell {
+        min-width: 0px; } }
+  .row_table_plan textarea {
+    height: 50px;
+    padding: 10px;
+    resize: none;
+    z-index: 20 !important;
+    outline: none;
+    border: none  !important;
+    width: 100%; }
+    .row_table_plan textarea p {
+      margin-bottom: 0; }
+  .row_table_plan textarea::-webkit-scrollbar {
+    width: 0px; }
+  .row_table_plan tr.inactive {
+    opacity: .3;
+    background: #f4f6f9; }
+    .row_table_plan tr.inactive * {
+      background-color: #f4f6f9; }
+  .row_table_plan .btn_more {
+    text-align: center;
+    color: #278ea5;
+    transition: all .2s;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    background: white;
+    width: 100%; }
+    .row_table_plan .btn_more:hover {
+      cursor: pointer;
+      background: #081f3d;
+      color: #21e6c1; }
+
 /*# sourceMappingURL=general_plantilla.css.map */

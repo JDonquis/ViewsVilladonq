@@ -11,7 +11,6 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
     <link rel="stylesheet" href="../../css/general_plantilla.css">
-    <link rel="stylesheet" href="../../css/plan_evaluacion.css">
     <title>Plan de evaluación</title>
 </head>
 
@@ -243,7 +242,7 @@ De los reinos: bla bla bla bla extera excetara excetera y todo lo que tenga que 
         function adjustTextareaHight(t) {
             t.style.height = 'auto';
             let scrollH = t.scrollHeight;
-            t.style.height = `${scrollH}px`;
+            t.style.height = `calc(${scrollH}px + 12px )`;
             allow = true
         }
         textareasFuctions(true)
@@ -282,11 +281,14 @@ De los reinos: bla bla bla bla extera excetara excetera y todo lo que tenga que 
         function focusWithClick() {
             document.querySelectorAll(".each_cell").forEach(td => {
                 td.onclick = () => {
-                    td.children[0].focus()
+                    const texta = td.querySelector('textarea')
+                    const texta_len = texta.value.length
+                    texta.setSelectionRange(texta_len, texta_len)
+                    texta.focus()
                 }
             })
         }
-
+        focusWithClick()
         // delete row
         function deleteRow() {
             let all_borrar_btn = document.querySelectorAll(".borrar i")
@@ -315,7 +317,7 @@ De los reinos: bla bla bla bla extera excetara excetera y todo lo que tenga que 
             })
             $("#N_uni")[0].value = n_unidades;
         }
-
+        deleteRow()
         // save data for then go back or next
 
         let history = []
