@@ -3438,7 +3438,7 @@ input[type="button"].btn-block {
 
 .custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
   background-color: rgba(0, 123, 255, 0.5);
-}
+}.
 
 .custom-radio .custom-control-label::before {
   border-radius: 50%;
@@ -3464,10 +3464,10 @@ input[type="button"].btn-block {
 }
 
 .custom-switch .custom-control-label::after {
-  top: calc(0.25rem 2px);
+  top: 6px;
   left: -35px;
-  width: calc(1rem - 1px);
-  height: calc(1rem - 1px);
+  width: 13px;
+  height: 13px;
   background-color: #adb5bd;
   border-radius: 0.5rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;

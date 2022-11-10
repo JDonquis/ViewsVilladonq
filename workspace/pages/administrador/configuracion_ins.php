@@ -76,8 +76,9 @@
     <div class="col-md-8">
         <div class="card">
 
-              <div class="card-header pb-0">
-                <h3 class="mt-3 card-title mt-1 mb-3  float-left">Cupos</h3>         
+              <div class="card-header">
+                <h2 class="h4 d-inline">Cupos </h2>
+
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
@@ -190,7 +191,7 @@
 
 
 <!--start docs *****************************************************************************************************************************************************************************************+ -->
-             <form class="row  row_table_plan" id="plan-form">
+             <form class="row  row_table_plan" id="docs-form">
                         <div class="col-md-10">
                             <div class="card parent_pdf">
                                 <div class="card-header">
@@ -200,10 +201,10 @@
                                         <button type="button" onclick="goNext()" title="volver al cambio ( ctrl + y )"
                                             class="fa-solid history_arrows future fa-arrow-rotate-right disabled ml-2 mr-4"></button>
                                     </div>
-
+                                    <h2 class="h4 d-inline">Documentos </h2>
                                     <div class="card-tools ">
                                         <span class="parent_btn_submit">
-                                        <input title='Ctrl + s' type="submit" name="save-plan" value="GUARDAR" class="btn_submit opacity-0 mt-0" id="docs_btn"></span>
+                                        <input title='Ctrl + s' type="submit" name="save-plan" value="GUARDAR" class="btn_submit d-none mt-0" id="docs_btn"></span>
                                     </div>
                                 </div>
                                 <!-- /.card-header -->
@@ -400,8 +401,17 @@
         const past_btn = document.querySelector(".past")
         const future_btn = document.querySelector(".future")
         const form = document.querySelector(".row_table_plan")
+        let checkboxs = table_docs.querySelectorAll("input[type=checkbox]")
         let allow = true;
 
+        table_docs.onchange = () => {
+            getData()
+        }
+
+        table_docs.oninput = () => {
+            submit_docs.classList.remove('d-none')
+            submit_docs.classList.add('opacity_1')
+        }
 
         function textareasFuctions(firts_time = false) {
             textareasTable = document.querySelectorAll("tbody textarea")
@@ -412,7 +422,6 @@
                 }
                 t.onchange = () => {
                     if (allow) {
-                        getData()
                         allow = true
                     }
                 }
@@ -431,29 +440,29 @@
             let tr = document.createElement('tr')
             let new_n = n_unidades + 1
             tr.id = `tr${new_n}`
-            const tds = `<td class="text-bold td_unidad">${new_n}
-                </td>
-                <td class="each_cell"><textarea name="tema${new_n}" id=""></textarea></td>
-                  <td class="text-center align-middle each_cell">
-                                                    <div class="form-group">
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input" id="solicitado${new_n}">
-                                                        <label class="custom-control-label" for="solicitado${new_n}""></label>
-                                                    </div>
-                                                    </div>
-                                                </td>
+            const tds = `
+            <td class="text-bold td_unidad">${new_n}</td>
+            <td class="each_cell"><textarea name="tema${new_n}" id="">
+                </textarea>
+            </td>
+            <td class="text-center align-middle each_cell">
+                <div class="form-group">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="solicitado${new_n}">
+                        <label class="custom-control-label" for="solicitado${new_n}"></label>
+                    </div>
+                </div>
+            </td>
 
-                                                <td class="text-center align-middle each_cell">
-                                                    <div class="form-group">
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input" id="requerido${new_n}">
-                                                        <label class="custom-control-label" for="requerido${new_n}"></label>
-                                                    </div>
-                                                    </div>
-                                                </td>
-               
-               
-                    <td class="borrar text-center"><i class="fa-solid fa-xmark" id="br${new_n}"></i></td>`
+            <td class="text-center align-middle each_cell">
+                <div class="form-group">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="requerido${new_n}">
+                    <label class="custom-control-label" for="requerido${new_n}"></label>
+                </div>
+                </div>
+            </td>
+            <td class="borrar text-center"><i class="fa-solid fa-xmark" id="br${new_n}"></i></td>`
 
             tr.innerHTML = tds
             tbody.append(tr)
@@ -465,6 +474,7 @@
             n_unidades++
             deleteRow()
             all_row = document.querySelectorAll('tbody tr')
+            checkboxs = document.querySelectorAll('input[type=checkbox]')
             allow = false;
             if (get_data) getData()
             $("#N_uni")[0].value = n_unidades;
@@ -480,7 +490,7 @@
                         const texta_len = texta.value.length
                         texta.setSelectionRange(texta_len, texta_len)
                         texta.focus()
-                        
+
                     }
                 }
             })
@@ -521,7 +531,7 @@
         let history = []
         let now = '';
         function getData() {
-            let new_data = { 'n_unidades': n_unidades, 'values': [...textareasTable].map(t => t.value) }
+            let new_data = { 'n_unidades': n_unidades, 'texta_values': [...textareasTable, ].map(t => t.value), 'checkbox_values': [...checkboxs].map(t => t.checked)  }
             if (now < history.length - 1) {
                 history.splice(now + 1, history.length - (now + 1), new_data);
                 future_btn.classList.add('disabled')
@@ -535,11 +545,8 @@
             if (now < 1) {
                 past_btn.classList.add('disabled')
 
-            } else {
-                submit_date.classList.remove('d-none')
-                submit_docs.classList.add('opacity_1')
-
-            }
+            } 
+            console.log(history)
 
         }
         getData()
@@ -572,8 +579,8 @@
             for (let i = 0; i < arr['n_unidades']; i++) {
                 addRow(false);
             }
-            textareasTable.forEach((t, i) => t.value = arr['values'][i])
-
+            textareasTable.forEach((t, i) => t.value = arr['texta_values'][i])
+            checkboxs.forEach((che, i) => che.checked = arr['checkbox_values'][i])
             textareasFuctions(true)
         }
 
