@@ -100,6 +100,7 @@ $color-red: rgb(139, 0, 0);
 body {
   background: $color1;
 }
+
 ul {
   list-style-type: none;
   margin-bottom: 0 ;
@@ -272,3 +273,36 @@ fieldset {
 .d-none {
   display: none;
 }
+.gradient_blue {
+  background: rgb(8,31,61);
+background: linear-gradient(72deg, rgba(8,31,61,1) 41%, rgba(39,142,165,1) 100%);
+}
+
+
+
+// .tooltip_parent {
+//     position: relative; 
+
+//     &:hover {
+//         & + .tooltip_child {
+//             display: block !important;
+
+//         }
+       
+//     }
+// }
+
+// .tooltip_child{ 
+//     width: 260px;
+//     padding: 15px;
+//     height: auto;
+//     background: #081f3d;
+//     color: white;
+//     position: absolute;
+//     bottom: calc(100% - 25px) ;
+//     right: 0;
+//     display: none; 
+//     &:hover {
+//         display: block;
+//     }
+//   }

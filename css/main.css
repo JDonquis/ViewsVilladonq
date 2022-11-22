@@ -215,6 +215,10 @@ fieldset {
 .d-none {
   display: none; }
 
+.gradient_blue {
+  background: #081f3d;
+  background: linear-gradient(72deg, #081f3d 41%, #278ea5 100%); }
+
 .main_nav {
   max-height: 90x;
   background-color: #081f3d;
@@ -432,6 +436,12 @@ fieldset {
   .history_arrows.disabled:hover {
     color: inherit;
     cursor: default; }
+
+.nav_fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100; }
 
 .login_form {
   position: fixed;

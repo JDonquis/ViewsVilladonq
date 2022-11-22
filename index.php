@@ -58,6 +58,8 @@
 
 
 </form>
+ <div class="gradient_blue">
+     
 
 <?php require_once "includes/_nav.php"; ?>
      
@@ -65,7 +67,7 @@
     <header class="home_header container">
 
          <div>
-             <h1 > La escuela del <span>futuro</span> ya llegó a prestarte la mejor educa<span>ción.</span></h1>             
+             <h1 > La escuela del <span>futuro</span> ya llegó a prestarte la mejor educación.</h1>             
          </div>
 
 
@@ -88,7 +90,7 @@
         </div>
     
     </header>
-
+ </div>
     <script type="module" src="js/functions/form_functions.js"></script>
     <script src="js/mySlider.js"></script>
   

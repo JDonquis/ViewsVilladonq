@@ -485,10 +485,13 @@
         function focusWithClick() {
             document.querySelectorAll(".each_cell").forEach(td => {
                 td.onclick = () => {
-                    const texta = td.querySelector('textarea')
+                    const texta = td.querySelectorAll('textarea')
                     if (texta) {
                         const texta_len = texta.value.length
-                        texta.setSelectionRange(texta_len, texta_len)
+                        console.log(texta.value.trim().length)
+                        if (!(texta.value.trim().length === 0)) {
+                            texta.setSelectionRange(texta_len, texta_len)
+                        }
                         texta.focus()
 
                     }

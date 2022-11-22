@@ -9,6 +9,9 @@ readers do not read off random characters that represent icons */
 .fa-fa-calendar::before {
   content: "\f073";
 }
+.fa-person-walking-dashed-line-arrow-right::before {
+  content: "\e553";
+}
 .fa-xmark-circle::before {
   content: "\f057";
 }

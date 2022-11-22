@@ -42,8 +42,8 @@
   src: url("../../css/fonts/Comfortaa-Light.ttf"); }
 
 * {
-  color: inherit;
-}
+  color: inherit; 
+} 
 body {
   overflow-x: hidden;
 }
@@ -85,7 +85,7 @@ a.active {
     max-width: 130px;
 
   }
-}
+} 
 
 .bg-1 { 
   background-color: $color1 !important; 
@@ -110,6 +110,9 @@ a.active {
 }
 .color-3 {
   color: $color3;
+}
+.color-4 {
+  color: $color4;
 }
 .color-red {
   color: rgb(139, 0, 0);

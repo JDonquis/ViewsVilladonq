@@ -214,3 +214,7 @@ fieldset {
     transform: translateX(50px) scale(1); } }
 .d-none {
   display: none; }
+
+.gradient_blue {
+  background: #081f3d;
+  background: linear-gradient(72deg, #081f3d 41%, #278ea5 100%); }

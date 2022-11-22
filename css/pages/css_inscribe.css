@@ -75,20 +75,20 @@
 body {
   background: #081f3d; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003104}}
 ul {
   list-style-type: none;
   margin-bottom: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003109}}
 a {
   text-decoration: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003113}}
 img {
   width: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003116}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003117}}
 h1,
 h2,
 h3,
@@ -96,7 +96,7 @@ h4,
 h5,
 h6 {
   font-family: "Encode Sans SemiExpanded", serif; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003124}}
   h1 *,
   h2 *,
   h3 *,
@@ -105,23 +105,23 @@ h6 {
   h6 * {
     font-family: "Encode Sans SemiExpanded", serif; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003127}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003128}}
 input {
   outline: none;
   border: NONE; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003132}}
 button {
   border: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003133}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003134}}
   button:hover {
     cursor: pointer; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003137}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003138}}
 fieldset {
   border: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003142}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003143}}
 .bottomToUp {
   opacity: 0;
   position: relative;
@@ -132,7 +132,7 @@ fieldset {
   to {
     opacity: 1;
     transform: translateY(0px); } }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003158}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003159}}
 .TopToDown {
   opacity: 0;
   position: relative;
@@ -143,7 +143,7 @@ fieldset {
   to {
     opacity: 1;
     transform: inherit; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003174}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003175}}
 .leftToRight {
   opacity: 0;
   transform: translateX(-100px);
@@ -153,7 +153,7 @@ fieldset {
   to {
     transform: inherit;
     opacity: 1; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003188}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003189}}
 .opacity_1 {
   opacity: 0;
   animation: opacity_1 1s ease;
@@ -161,7 +161,7 @@ fieldset {
 @keyframes opacity_1 {
   to {
     opacity: 1; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003200}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003201}}
 .width_0 {
   width: 0%;
   animation: width_0 2s ease;
@@ -169,7 +169,7 @@ fieldset {
 @keyframes width_0 {
   to {
     width: 100%; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003214}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003215}}
 .screenShow {
   position: fixed;
   width: 100%;
@@ -186,12 +186,12 @@ fieldset {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\0000374}}
   .screenShow.full_screen_down {
     transform: translateY(100vh); }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003219}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003220}}
   .screenShow.hidden_screen_loader {
     transition: 0.6s ease;
     transition-delay: 0.1s;
     transform: translateX(-100%); }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003224}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003225}}
   .screenShow.toUp {
     animation: toUp 0.5s ease forwards; }
 @keyframes toUp {
@@ -199,7 +199,7 @@ fieldset {
     transform: translateY(200vh); }
   100% {
     transform: translateY(0px); } }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003235}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003236}}
   .screenShow .shadowsLoader {
     width: max(300px, 50%);
     height: 360px;
@@ -207,29 +207,29 @@ fieldset {
     grid-template-columns: repeat(7, 1fr);
     gap: 40px;
     border-radius: 3px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003242}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003243}}
     .screenShow .shadowsLoader span {
       color: #117f97;
       animation: moveShadows 1.6s linear infinite; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003246}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003247}}
       .screenShow .shadowsLoader span:nth-of-type(1) {
         animation-delay: 0s; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003246}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003247}}
       .screenShow .shadowsLoader span:nth-of-type(2) {
         animation-delay: 0.2s; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003246}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003247}}
       .screenShow .shadowsLoader span:nth-of-type(3) {
         animation-delay: 0.4s; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003246}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003247}}
       .screenShow .shadowsLoader span:nth-of-type(4) {
         animation-delay: 0.6s; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003246}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003247}}
       .screenShow .shadowsLoader span:nth-of-type(5) {
         animation-delay: 0.8s; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003246}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003247}}
       .screenShow .shadowsLoader span:nth-of-type(6) {
         animation-delay: 1s; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003246}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003247}}
       .screenShow .shadowsLoader span:nth-of-type(7) {
         animation-delay: 1.2s; }
 @keyframes moveShadows {
@@ -245,9 +245,14 @@ fieldset {
     box-shadow: 0 0 0 #081f3d;
     opacity: 0;
     transform: translateX(50px) scale(1); } }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003272}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003273}}
 .d-none {
   display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/base\.scss}line{font-family:\00003276}}
+.gradient_blue {
+  background: #081f3d;
+  background: linear-gradient(72deg, #081f3d 41%, #278ea5 100%); }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/_components\.scss}line{font-family:\00003122}}
 .btn_submit {
@@ -356,6 +361,13 @@ fieldset {
   .history_arrows.disabled:hover {
     color: inherit;
     cursor: default; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/_components\.scss}line{font-family:\00003248}}
+.nav_fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/mySlider\.scss}line{font-family:\000032}}
 .fade_effect .slider_wrap {
@@ -606,7 +618,8 @@ body, html {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\000039}}
 .cont_h1_and_form {
-  overflow: hidden; }
+  overflow: hidden;
+  height: calc(90% - 30px); }
   @media (min-width: 800px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\000039}}
     .cont_h1_and_form {
@@ -617,7 +630,7 @@ body, html {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\000039}}
     .cont_h1_and_form {
       grid-template-columns: 50% 50%; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000322}}
   .cont_h1_and_form .h1_cont {
     background-color: #21e6c1;
     display: flex;
@@ -625,30 +638,30 @@ body, html {
     font-style: clamp(28px, 6vw, 60px);
     align-items: center;
     min-height: 250px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000329}}
     .cont_h1_and_form .h1_cont h1 {
       text-align: center;
       width: 90%;
       color: #081f3d; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000337}}
   .cont_h1_and_form form.inscribe {
     padding-block: 20px;
     background-color: #278ea5;
     display: flex;
     align-items: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000343}}
     .cont_h1_and_form form.inscribe .nav_slider {
       position: absolute;
       top: 20px;
       left: 90px;
       width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000350}}
     .cont_h1_and_form form.inscribe .progress_bar {
       position: absolute;
       top: 0;
       height: 20px;
       left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000356}}
       .cont_h1_and_form form.inscribe .progress_bar div {
         background: linear-gradient(to right, #1f4287, #21e6c1);
         border-radius: 5px; }
@@ -748,30 +761,29 @@ body, html {
         font-size: 18px;
         width: 100%;
         outline: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000364}}
     .cont_h1_and_form form.inscribe .card_form {
       overflow: hidden;
       padding-top: 40px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000368}}
       .cont_h1_and_form form.inscribe .card_form fieldset {
-        transition: .4s all ease;
-        height: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000371}}
+        transition: .4s all ease; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000372}}
         .cont_h1_and_form form.inscribe .card_form fieldset label {
           transform: translateX(10px); }
     @media (min-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000379}}
       .cont_h1_and_form form.inscribe .d-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000388}}
     .cont_h1_and_form form.inscribe input[type=file] {
       margin-bottom: 25px;
       color: #278ea5;
       display: block;
       width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\0000395}}
     .cont_h1_and_form form.inscribe ::-webkit-file-upload-button {
       transition: all .4s ease;
       margin-top: 10px;
@@ -782,30 +794,30 @@ body, html {
       background-color: #1f4287;
       border: none;
       color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003107}}
       .cont_h1_and_form form.inscribe ::-webkit-file-upload-button:hover {
         cursor: pointer;
         background: #21e6c1;
         color: #081f3d; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003114}}
     .cont_h1_and_form form.inscribe #ins_date_birth {
       color: transparent; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003116}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003117}}
       .cont_h1_and_form form.inscribe #ins_date_birth.focus_valid {
         color: white !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003121}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003122}}
     .cont_h1_and_form form.inscribe .parent_btn_submit {
       margin: 0 !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003124}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003125}}
       .cont_h1_and_form form.inscribe .parent_btn_submit .btn_submit {
         margin: 0 !important;
         padding-inline: 45px !important;
         font-size: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003133}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003134}}
     .cont_h1_and_form form.inscribe .arrow_buttons {
       align-items: center;
       transition: all .3 ease; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003137}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003138}}
       .cont_h1_and_form form.inscribe .arrow_buttons .next {
         font-size: 18px !important;
         background: #21e6c1 !important;
@@ -813,17 +825,17 @@ body, html {
         color: #081f3d;
         text-align: center;
         font-weight: bold; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003150}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003151}}
       .cont_h1_and_form form.inscribe .arrow_buttons .prev {
         font-size: 50px;
         color: #278ea5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003158}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003159}}
       .cont_h1_and_form form.inscribe .arrow_buttons button.disable {
         opacity: 0 !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003162}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003163}}
       .cont_h1_and_form form.inscribe .arrow_buttons button:hover {
         color: #1f4287; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003171}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/pages\/css_inscribe\.scss}line{font-family:\00003172}}
 .slider_wrap {
   overflow-x: hidden !important; }

@@ -221,7 +221,7 @@ $top_pixels: 20px;
     
 }
 
-.success_feedback { 
+.success_feedback {  
     background: green;
     color: white;    
 } 
@@ -244,3 +244,10 @@ $top_pixels: 20px;
         }
     }
 } 
+
+.nav_fixed {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+    }
