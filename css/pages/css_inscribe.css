@@ -367,7 +367,16 @@ fieldset {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 100; }
+  display: flex;
+  align-items: self-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 100;
+  gap: 13px;
+  height: 100px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/_components\.scss}line{font-family:\00003261}}
+  .nav_fixed > * {
+    box-shadow: 0px 0px 9px grey; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/views_villadonq\/css\/mySlider\.scss}line{font-family:\000032}}
 .fade_effect .slider_wrap {

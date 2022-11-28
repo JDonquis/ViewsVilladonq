@@ -6,6 +6,9 @@
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 readers do not read off random characters that represent icons */
 /********************************************************************************************************************************************************************************************************************************************************************/
+.fa-trash-can::before {
+  content: "\f2ed";
+}
 .fa-fa-calendar::before {
   content: "\f073";
 }

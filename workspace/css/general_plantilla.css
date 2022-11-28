@@ -319,7 +319,15 @@ fieldset {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 100; }
+  display: flex;
+  align-items: self-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 100;
+  gap: 13px;
+  height: 100px; }
+  .nav_fixed > * {
+    box-shadow: 0px 0px 9px grey; }
 
 @font-face {
   font-family: "Encode Sans SemiExpanded";
@@ -371,6 +379,9 @@ section.content, content-wrapper {
 
 .main-sidebar {
   background-color: #081f3d !important; }
+
+.wrapper {
+  height: min-content !important; }
 
 p {
   margin-bottom: 0 !important; }

@@ -47,11 +47,23 @@
 body {
   overflow-x: hidden;
 }
+// .wrapper {
+//   /*min-height: 100%;
+//   position: relative;
+//   overflow: hidden;*/
+//   width: 100%;
+//   min-height: 100%;
+//   height: auto !important;
+//   position: absolute;
+// } 
 section.content, content-wrapper{
   padding-bottom: 40px !important ; 
 }
 .main-sidebar {
   background-color: $color1 !important; 
+}
+.wrapper {
+  height: min-content !important;
 }
 p {
   margin-bottom: 0 !important;

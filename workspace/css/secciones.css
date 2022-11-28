@@ -319,7 +319,15 @@ fieldset {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 100; }
+  display: flex;
+  align-items: self-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 100;
+  gap: 13px;
+  height: 100px; }
+  .nav_fixed > * {
+    box-shadow: 0px 0px 9px grey; }
 
 @font-face {
   font-family: "Encode Sans SemiExpanded";
@@ -371,6 +379,9 @@ section.content, content-wrapper {
 
 .main-sidebar {
   background-color: #081f3d !important; }
+
+.wrapper {
+  height: min-content !important; }
 
 p {
   margin-bottom: 0 !important; }
@@ -498,6 +509,23 @@ a.active {
 
 tr {
   position: relative; }
+  tr.active {
+    background: #081f3d !important;
+    color: #21e6c1 !important; }
+  tr input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center; }
+  tr td:nth-child(2) {
+    padding: 5px !important; }
+  tr td:nth-child(1) {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
+
+.dataTables_filter {
+  margin-bottom: 10px; }
 
 .tooltip_child {
   max-width: 360px;
@@ -529,4 +557,18 @@ tr {
   .btn_change_all.active {
     background: #081f3d !important;
     color: #21e6c1 !important;
+    opacity: 1; }
+
+.accordion .btn {
+  background-colors: grey !important;
+  color: white; }
+
+.dataTables_filter {
+  float: right;
+  max-width: 200px !important; }
+
+.delete_icon {
+  opacity: 0.1; }
+  .delete_icon:hover {
+    cursor: pointer;
     opacity: 1; }

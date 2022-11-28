@@ -1,13 +1,61 @@
 const abc = ['A','B','C','D','E','F','G','H','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 const allTables = document.querySelectorAll('table')
 const all_btn_change_solo = document.querySelectorAll('.btn_change_solo')
+const total_rooms = document.querySelector('#total_rooms')
+const total_sections = document.querySelector('#total_sections')
+const free_classrooms = document.querySelector('#free_classrooms')
+const add_btns = document.querySelectorAll('.add_btn')
+const all_years = document.querySelectorAll('.each_year')
+
+function disableOrNotAddBtnSections() {
+	if (total_sections.textContent >= total_rooms.value) {
+			for (const btn of add_btns) btn.classList.remove('d-block')
+		}
+	else {
+		for (const btn of add_btns) btn.classList.add('d-block')
+	}
+}
+disableOrNotAddBtnSections() 
+
+
+function addDeleteIcon(year) {
+
+		const n_sections = add_btns[year].dataset.nsections
+		const actual_delete_icon = document.querySelector(`.each_year[data-year="${year}"] .delete_icon`)
+		if (actual_delete_icon) {
+			actual_delete_icon.remove()
+		}
+		if (n_sections > 1) {
+			const delete_icon = document.createElement('i')
+			delete_icon.classList.add(' ml-2', 'delete_icon', 'fas', 'fa-trash-can')
+			delete_icon.dataset.year = i
+			delete_icon.dataset.table = `table-${i}${abc[n_sections]}`
+			document.querySelectorAll('.each_section h4')[n_sections].append(delete_icon)
+		}
+
+
+
+		// delete_icons.forEach(delete_icon => {
+		// 	delete_icon.classList.add('d-none')
+		// })
+		// delete_icons[delete_icons.length-1].classList.remove('d-none')
+	
+}
+	
+all_years.forEach((each_year, i) => {
+	addDeleteIcon(i)
+})
 
 function newTable(year, section) {
 
+
 return `
-<div class="P-4">
+ 				<article class="each_section" data-table="table-${year}${section}">
+							<div class="position-absolute Pl-4 pb-0">
                                     <div class="mx-auto">
-                                        <h4 class="h4">Sección ${year}${section}</h4>
+                                        <h4 class="h4">Sección ${year}${section}
+                                         <i data-table="table-${year}${section}" data-year="${year}" title="Eliminar Sección" class=" ml-2 delete_icon fas fa-trash-can" ></i>
+                                        </h4>
                                         <p>matricula: 0</p>
                                     </div>
                                  </div>
@@ -39,6 +87,7 @@ return `
 
                                     </table>
                                 </div>
+                                </article>
 `
 }
 
@@ -61,9 +110,7 @@ document.querySelector('body').onclick = (e) =>{
 		change_box.classList.remove('d-block')
 		status_change_box = 0
 		selected_for_change_one.tr?.querySelector('i').classList.remove('color-4')
-	} else {
-		console.log('culo')
-	}
+	} 
 
 	// event: click on crear una nueva sección ************************************+
 	if (el.classList.contains('add_btn')) {
@@ -87,18 +134,24 @@ document.querySelector('body').onclick = (e) =>{
      					}]
     		})
 
-		el.dataset.nsections++
-		}
+		let nSections = ++el.dataset.nsections
+		document.querySelector(`.nSections[data-year="${year}"]`).textContent = nSections
+		UpdateOptionsSections(year)
+		++total_sections.textContent
+		--free_classrooms.textContent
+
+		disableOrNotAddBtnSections() 
+		addDeleteIcon(year-1)
+
+	}
 
 	// event: click on icon change section
 		if (el.classList.contains('btn_change_solo')) {
 			change_box.classList.add('d-block')
-			console.log(window.pageYOffset + el.getBoundingClientRect().top)
 			change_box.classList.remove('position-fixed')
 
 			change_box.style.top = `${window.pageYOffset + el.getBoundingClientRect().top  - 110}px`
 			// change_box = change_box;
-				// console.log(el.getBoundingClientRect().top)
 			// const selected_table = el.closest('table')
 			const actual_table = el.closest('table')
 			const actual_year = actual_table.dataset.year
@@ -110,7 +163,7 @@ document.querySelector('body').onclick = (e) =>{
 
 			UpdateOptionsSections(actual_year)
 
-			selected_for_change_one = {table: $(`#${actual_table.id}`), tr: el.closest('tr')}
+			selected_for_change_one = {table_id: actual_table.id, tr: el.closest('tr')}
 
 			// const isThere = tables_selected.findIndex(obj => obj.table == selected_table)
 			// if (isThere != -1) {
@@ -119,23 +172,41 @@ document.querySelector('body').onclick = (e) =>{
 			// 	tables_selected.push({table: selected_table, students: [el.closest('tr')]})
 			// }
 
-			// console.log(tables_selected)
 		}
 
 	// event: click on a acpet change
 	if(el.classList.contains('btn_change_acept')) {
-		const origin_table = selected_for_change_one.table.DataTable()
-		const select = el.closest('.change_box').querySelector('select')
-		let new_data = origin_table.row(selected_for_change_one.tr).data()
-	 	const destiny_table = $(`#table-${select.value}`).DataTable()
-	 	// console.log(new_data)
-		destiny_table.row.add(new_data).draw().columns.adjust().responsive.recalc()
+		
 
-		selected_for_change_one.table.append(change_box)
-		change_box.classList.remove('d-block')
+		if (btn_change_all.classList.contains('active')) {
+
+			console.log('click')
+
+			tables_selected.forEach( obj => {
+				let origin = $(`#${obj.table_id}`).DataTable()
+				let new_data = origin.rows(obj.students).data()
+				let destiny_table = $(`#table-${select.value}`).DataTable()
+				destiny_table.rows.add(new_data).draw().columns.adjust().responsive.recalc()
+	 			origin.rows(obj.students).remove().draw()
+
+
+	 			change_box.classList.remove('d-block')
+				btn_change_all.classList.add('d-none')
+				btn_change_all.classList.remove('active')
+				tables_selected = []
+				check_selected_in_year = false
+			})
+		} else {
+			const origin_table = $(`#${selected_for_change_one.table_id}`).DataTable()
+			let new_data = origin_table.row(selected_for_change_one.tr).data()
+	 		let destiny_table = $(`#table-${select.value}`).DataTable()
+			destiny_table.row.add(new_data).draw().columns.adjust().responsive.recalc()
+
+			change_box.classList.remove('d-block')
     	// selected_for_change_one.table.a(status_change_box)
-	 	origin_table.row(selected_for_change_one.tr).remove().draw()
-		selected_for_change_one = {}
+	 		origin_table.row(selected_for_change_one.tr).remove().draw()
+			selected_for_change_one = {}
+		}
 	}
 
 
@@ -154,9 +225,21 @@ document.querySelector('body').onclick = (e) =>{
 
 	}
 
-	
+	// delete a section **********************************++
+	if (el.classList.contains('delete_icon')) {
+		document.querySelector(`article[data-table="${el.dataset.table}"]`).remove()
+		--total_sections.textContent
+		++free_classrooms.textContent
+
+		--document.querySelector(`.add_btn[data-year="${el.dataset.year}"]`).dataset.nsections
+		disableOrNotAddBtnSections()
+		addDeleteIcon(el.dataset.year - 1)
+
+	}
 
 }
+// </ ---------- finish click on body
+
 
 const btn_change_all = document.querySelector('.btn_change_all')
 let check_selected_in_year = false
@@ -165,32 +248,44 @@ let check_selected_in_year = false
 document.onchange = (e) => {
 	const el = e.target
 
-	if (el.type = 'checkbox'){
+	if (el.type === 'checkbox'){
 
 		const selected_table = el.closest('table')
 		const year_selected = selected_table.dataset.year
 		if (check_selected_in_year === false) check_selected_in_year = year_selected
-		const allTablesOfSelectedYear = document.querySelectorAll(`table[data-year="${year_selected}"] input[type=checkbox]`)
+		const allCheckboxOfSelectedYear = document.querySelectorAll(`table[data-year="${year_selected}"] input[type=checkbox]`)
+		const tr = el.closest('tr')
 
 		if (check_selected_in_year === year_selected) {
-
-			if ([...allTablesOfSelectedYear].find(checkbox => checkbox.checked == true)) {
-				btn_change_all.classList.remove('d-none')
+			tr.classList.toggle('active')
+			const isThere = tables_selected.findIndex(obj => obj.table_id == selected_table.id)
+			if (el.checked === true) {
+				if (isThere != -1) {
+					tables_selected[isThere].students.push(el.closest('tr'))
+				} else {
+					tables_selected.push({table_id: selected_table.id, students: [el.closest('tr')]})
+				}
 			} else {
-				btn_change_all.classList.add('d-none')
-				check_selected_in_year = false
 
+				const indexDelete = tables_selected[isThere].students.indexOf(tr)
+				if (indexDelete != -1)  tables_selected[isThere].students.splice(indexDelete,1)
+				
 			}
+			
+			if ([...allCheckboxOfSelectedYear].find(checkbox => checkbox.checked == true)) {
+					btn_change_all.classList.remove('d-none')
+				} else {
+					change_box.classList.remove('d-block')
+					btn_change_all.classList.add('d-none')
+					btn_change_all.classList.remove('active')
+					tables_selected = []
+					check_selected_in_year = false
+				}
+
 		} else { el.checked = false }
 		
 
-		const isThere = tables_selected.findIndex(obj => obj.table == selected_table)
-			if (isThere != -1) {
-				tables_selected[isThere].students.push(el.closest('tr'))
-			} else {
-				tables_selected.push({table: selected_table, students: [el.closest('tr')]})
-			}
-		}
+	}
 
 
 }
@@ -203,10 +298,8 @@ document.onchange = (e) => {
 // 	 if (el.dataset.use = "select_new_section") {
 // 	 	const origin_table = $(`#table-1A`).DataTable()
 
-// 	 	console.log(selected_for_change_one)
 // 	 	let new_data = origin_table.row(selected_for_change_one).data()
 // 	 	const destiny_table = $(`#table-${el.value}`).DataTable()
-// 	 	console.log(new_data)
 // 		destiny_table.row.add(new_data).draw()
 // 	 	origin_table.row(selected_for_change_one).remove().draw()
 // 		selected_for_change_one = ''
@@ -216,7 +309,6 @@ document.onchange = (e) => {
 // allTables.forEach(t => {
 // 	const change_box = document.querySelector(`#change_box_${t.id}`)
 // 	const year = t.dataset.year
-// 	console.log(year)
 // 	t.addEventListener('click', (e) => {
 // 		if (e.target.classList.contains('btn_change_one')) {
 // 			change_box.classList.add('d-block')
@@ -230,9 +322,7 @@ document.onchange = (e) => {
 
 function UpdateOptionsSections(year) {
 	const n_sections = document.querySelector(`.add_btn[data-year="${year}"]`).dataset.nsections
-
 	const optionsFragment = document.createDocumentFragment()
-
 	for(let i = 0; i<n_sections ; i++ ) {	
 		const optionElement = document.createElement('option')
 		optionElement.textContent = `${year}${abc[i]}`
@@ -240,3 +330,4 @@ function UpdateOptionsSections(year) {
 	}
 	select.replaceChildren(optionsFragment)
 }
+	
