@@ -1,5 +1,5 @@
 <a href="#" class="brand-link">
-    <img src="../../img/complete_logo.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <img src="" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
     <span class="brand-text font-weight-light">Workspace</span>
 </a>
 
@@ -9,7 +9,7 @@
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
 
         <div class="image">
-            <img src="../../img/pexels-emily-ranquist-1205651.webp" class="img-circle elevation-2" alt="User Image">
+            <img src="" class="img-circle elevation-2" alt="User Image">
         </div>
 
         <div class="info">

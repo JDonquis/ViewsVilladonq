@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <!-- Theme style -->
+    <link rel="stylesheet" href="../../plugins/toastr/toastr.min.css">
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
     <link rel="stylesheet" href="../../css/secciones.css">
     <title>Secciones</title>
@@ -62,8 +63,7 @@
                             <!-- SELECT2 EXAMPLE -->
 
                             <h1 class="mb-3">Secciones</h1>
-                            <label for="aulas">aulas <input type="number" class="d-inline form-control col-3 ml-2" name="" value="20" id="total_rooms"></label>
-
+                            <label for="aulas">aulas <input min="19" type="number" class="d-inline form-control col-3 ml-2" name="" value="20" id="total_rooms"></label>
                             <p>Secciones: <b id="total_sections">19</b></p>
                             <p>Aulas libres: <b id="free_classrooms">1</b></p>
 
@@ -76,7 +76,7 @@
 
             <!-- Main content -->
             <section class="content">
-                <div class="container-fluid">
+                <div class="container-fluid" id="content_itself">
 
                     <nav class="nav_fixed">
 
@@ -90,13 +90,13 @@
 
 
                         <article class="card each_year" data-year='1'>
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="button_year btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 <div class="P-3" id="headingOne">
                                     <h3 class="mb-0 color-primary">
                                         1 - Primer año
                                     </h3>
-                                    <p class="color-primary mb-0">Nro de secciones: <b class="nSections" data-year="1">1</b></p>
-                                    <p class="color-primary mb-0">Cantidad total de estudiantes: <b class="nStudents" data-year="1">300</b></p>
+                                    <p class="color-primary mb-0">Nro de secciones: <b class="nSections" data-year="1">2</b></p>
+                                    <p class="color-primary mb-0">Cantidad total de estudiantes: <b class="nStudents" data-year="1">30</b></p>
                                 </div>
                             </button>
 
@@ -104,17 +104,17 @@
 
                                 <div class="form-group">
                                     <!-- task for Donquis: add the total number of sections in this year -->
-                                    <button data-year='1' data-nsections="1" for='new_subject_name' class="mx-auto d-block d-none add_btn">+ Crear sección</button>
+                                    <button data-year='1' data-nsections="2" for='new_subject_name' class="mx-auto d-block d-none add_btn">+ Crear sección</button>
                                 </div>
-                                <article class="each_section" data-table="table-1A">
+                                <article class="each_section" data-section="1A">
                                     <div class="position-absolute Pl-4 pb-0">
                                         <div class="mx-auto">
                                             <h4 class="h4">Sección 1A </h4>
-                                            <p>matricula: 30</p>
+                                            <p>matricula: <b class="n_students" data-section="1A">6</b> </p>
                                         </div>
                                     </div>
                                     <div class="card-body table-responsive">
-                                        <table id="table-1A" data-year='1' class="table display position-relative table-head-fixed text-nowrap table-striped table-bordered">
+                                        <table data-year="1" data-section="1A" class="table display position-relative table-head-fixed text-nowrap table-striped table-bordered">
 
                                             <thead>
                                                 <tr>
@@ -146,6 +146,124 @@
 
                                                         </i></td>
                                                 </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><input type="checkbox" name=""></td>
+                                                    <td>Douglas Javier</td>
+                                                    <td>Villasmil Tovar</td>
+                                                    <td><a href="#">ver foto</a></td>
+                                                    <td>27253194</td>
+                                                    <td>22</td>
+                                                    <td>0426037352</td>
+                                                    <td>juanvillans16@gmail.com</td>
+                                                    <td class="td_action"><i data-year="1" title="Cambiar de sección" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
+
+                                                        </i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><input type="checkbox" name=""></td>
+                                                    <td>Dalexer noseque</td>
+                                                    <td>Colina Ramirez</td>
+                                                    <td><a href="#">ver foto</a></td>
+                                                    <td>29342184</td>
+                                                    <td>20</td>
+                                                    <td>0212438719</td>
+                                                    <td>dalexercivirigua@gmail.com</td>
+                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
+
+                                                        </i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><input type="checkbox" name=""></td>
+                                                    <td>Dalexer noseque</td>
+                                                    <td>Colina Ramirez</td>
+                                                    <td><a href="#">ver foto</a></td>
+                                                    <td>29342184</td>
+                                                    <td>20</td>
+                                                    <td>0212438719</td>
+                                                    <td>dalexercivirigua@gmail.com</td>
+                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
+
+                                                        </i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><input type="checkbox" name=""></td>
+                                                    <td>Dalexer noseque</td>
+                                                    <td>Colina Ramirez</td>
+                                                    <td><a href="#">ver foto</a></td>
+                                                    <td>29342184</td>
+                                                    <td>20</td>
+                                                    <td>0212438719</td>
+                                                    <td>dalexercivirigua@gmail.com</td>
+                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
+
+                                                        </i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><input type="checkbox" name=""></td>
+                                                    <td>Juan Diego</td>
+                                                    <td>Donquis Gonzales</td>
+                                                    <td><a href="#">ver foto</a></td>
+                                                    <td>30101010</td>
+                                                    <td>15</td>
+                                                    <td>0269356969</td>
+                                                    <td>mondonquis@gmail.com</td>
+                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" class="btn_change_solo fas fa-person-walking-dashed-line-arrow-right"></i>
+
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+                                </article>
+
+                                <article class="each_section" data-section="1B">
+                                    <div class="position-absolute Pl-4 pb-0">
+                                        <div class="mx-auto">
+                                            <h4 class="h4">Sección 1B </h4>
+                                            <p>matricula: <b class="n_students" data-section="1B">3</b> </p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body table-responsive">
+                                        <table data-year="1" data-section="1B"   data-section="1B" class="table display position-relative table-head-fixed text-nowrap table-striped table-bordered">
+
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th data-priority="1">Nombres </th>
+                                                    <th>Apellidos</th>
+                                                    <th>Foto</th>
+                                                    <th>Cedula</th>
+                                                    <th>Edad</th>
+                                                    <th>Tel del representante</th>
+                                                    <th>correo</th>
+                                                    <th data-priority="2">acción</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><input type="checkbox" name=""></td>
+                                                    <td>Juan Francisco</td>
+                                                    <td>Villasmil Tovar</td>
+                                                    <td><a href="#">ver foto</a></td>
+                                                    <td>27253194</td>
+                                                    <td>22</td>
+                                                    <td>0426037352</td>
+                                                    <td>juanvillans16@gmail.com</td>
+                                                    <td class="td_action"><i data-year="1" title="Cambiar de sección" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
+
+                                                        </i></td>
+                                                </tr>
+                                               
                                                 <tr>
                                                     <td></td>
                                                     <td><input type="checkbox" name=""></td>
@@ -185,7 +303,7 @@
 
 
                         <article class="card each_year" data-year="2">
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            <button class="button_year btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                 <div class="P-3" id="headingTwo">
                                     <h3 class="mb-0 color-primary">
                                         2 - Segundo año
@@ -202,16 +320,16 @@
                                     <!-- task for Donquis: add the total number of sections in this year -->
                                     <button data-year='2' data-nsections="1" for='new_subject_name' class="mx-auto d-block d-none add_btn">+ Crear sección</button>
                                 </div>
-                                <article class="each_section" data-table="table-2A">
+                                <article class="each_section" data-section="2A">
                                     <div class="position-absolute Pl-4 pb-0">
                                         <div class="mx-auto">
                                             <h4 class="h4">Sección 2A
                                             </h4>
-                                            <p>matricula: 30</p>
+                                            <p>matricula: <b class="n_students" data-section="2A">30</b> </p>
                                         </div>
                                     </div>
                                     <div class="card-body table-responsive">
-                                        <table id="table-2A" data-year='2' class="table display position-relative table-head-fixed text-nowrap table-striped table-bordered">
+                                        <table data-year="2" data-section="2A"  class="table display position-relative table-head-fixed text-nowrap table-striped table-bordered">
 
                                             <thead>
                                                 <tr>
@@ -310,7 +428,8 @@
     <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
     <!-- <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script> -->
     <!-- <script src="../../plugins/jszip/jszip.min.js"></script> -->
-
+    <!-- Toastr -->
+    <script src="../../plugins/toastr/toastr.min.js"></script>
 
     <!-- AdminLTE App -->
     <script src="../../dist/js/adminlte.min.js"></script>

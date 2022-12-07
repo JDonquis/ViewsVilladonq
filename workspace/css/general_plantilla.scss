@@ -113,10 +113,13 @@ a.active {
 .bg-4 {
   background-color: $color4 !important; 
 }
+.bg-red {
+  background-color: rgb(139, 0, 0);
+}
 
 .color-1 {
   color: $color1;
-}
+} 
 .color-2 {
   color: $color2;
 }
@@ -168,14 +171,14 @@ a.active {
         width: 65px !important;
         min-width: 65px !important;
     }
-    td.borrar i {
+    .borrar_btn {
         &:hover {
             cursor: pointer;
             color: $color4;
         }
-    }
+    } 
     .td_unidad, .th_unidad {
-        width: 95px;
+        max-width: 40px;
         padding-left: 14px !important;
     }
     .each_cell {
