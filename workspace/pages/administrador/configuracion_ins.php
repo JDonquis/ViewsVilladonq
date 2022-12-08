@@ -348,7 +348,11 @@
         }
         if (inp_start.value.length > 0) {
             inp_start.disabled = true
+            
             inp_end.disabled = false
+        } else {
+            inp_start.min = new Date().toISOString().split("T")[0]
+
         }
         // inp_start.onchange = (e) => {
 
@@ -553,6 +557,9 @@
             if (now < 1) {
                 past_btn.classList.add('disabled')
 
+            } else {
+                submit_docs.classList.remove('d-none')
+            submit_docs.classList.add('opacity_1')
             }
             console.log(history)
 
