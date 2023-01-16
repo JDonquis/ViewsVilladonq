@@ -217,7 +217,6 @@
                                                 <th>Nombre del documento</th>
                                                 <th>Solicitado</th>
                                                 <th>Obligatorio</th>
-                                                <th class="th_valor">Eliminar</th>
 
                                             </tr>
                                         </thead>
@@ -244,8 +243,6 @@
                                                         </div>
                                                     </div>
                                                 </td>
-
-                                                <td class="borrar text-center"><i class=" fa-solid fa-xmark" id="br1"></i></td>
 
                                             </tr>
 
@@ -449,13 +446,15 @@
             tr.id = `tr${new_n}`
             const tds = `
             <td class="text-bold td_unidad">${new_n}</td>
-            <td class="each_cell"><textarea name="tema${new_n}" id=""></textarea>
+            <td class="each_cell">
+            <input type="hidden" name="doc-id-${new_n}" value="${new_n}">
+            <textarea name="tema${new_n}" id=""></textarea>
             </td>
             <td class="text-center align-middle each_cell">
                 <div class="form-group">
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="solicitado${new_n}">
-                        <label class="custom-control-label" for="solicitado${new_n}"></label>
+                        <input type="checkbox" class="custom-control-input" name="requested${new_n}-1" id="requested${new_n}">
+                        <label class="custom-control-label" for="requested${new_n}"></label>
                     </div>
                 </div>
             </td>
@@ -463,12 +462,12 @@
             <td class="text-center align-middle each_cell">
                 <div class="form-group">
                 <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="requerido${new_n}">
-                    <label class="custom-control-label" for="requerido${new_n}"></label>
+                    <input type="checkbox" class="custom-control-input" name="required${new_n}-2" id="required${new_n}">
+                    <label class="custom-control-label" for="required${new_n}"></label>
                 </div>
                 </div>
             </td>
-            <td class="borrar text-center"><i class="fa-solid fa-xmark" id="br${new_n}"></i></td>`
+           `
 
             tr.innerHTML = tds
             tbody.append(tr)
@@ -477,7 +476,7 @@
             new_tema.focus()
             textareasFuctions()
             n_unidades++
-            deleteRow()
+       
             all_row = document.querySelectorAll('tbody tr')
             checkboxs = document.querySelectorAll('input[type=checkbox]')
             allow = false;
@@ -504,36 +503,9 @@
         //     })
         // }
         // focusWithClick()
-            console.log('ahh')
-        // delete row
-        function deleteRow() {
-            let all_borrar_btn = document.querySelectorAll(".borrar i")
-
-            all_borrar_btn.forEach((btn_borrar) => {
-
-                btn_borrar.onclick = () => {
-                    let id_tr = btn_borrar.id
-                    let n_id = id_tr.match(/[\d]/g).join('')
-                    let row = document.querySelector(`#tr${n_id}`)
-                    row.classList.add('removing')
-                    n_id = +n_id
-                    setTimeout(() => {
-                        row.remove()
-                        for (let j = n_id; j < n_unidades; j++) {
-                            let edit_row = document.querySelector(`#tr${j + 1}`)
-                            edit_row.id = `tr${j}`
-                            let edit_b = document.querySelector(`#br${j + 1}`)
-                            edit_b.id = `br${j}`
-                            edit_row.children[0].textContent = j;
-                        }
-                        n_unidades--
-                        getData()
-                    }, 200);
-                }
-            })
-            $("#N_uni")[0].value = n_unidades;
-        }
-        deleteRow()
+        
+      
+       
         // save data for then go back or next
 
         let history = []
@@ -556,12 +528,17 @@
             past_btn.classList.remove('disabled')
             if (now < 1) {
                 past_btn.classList.add('disabled')
-
+                
             } else {
                 submit_docs.classList.remove('d-none')
             submit_docs.classList.add('opacity_1')
             }
-            console.log(history)
+        
+            const new_data_values = Object.values(new_data).flat()
+            const areEqual = Object.values(history[0]).flat().every((e,i)=>e == new_data_values[i])
+            if (areEqual === true) {
+                submit_docs.classList.add('d-none')
+            }
 
         }
         getData()
@@ -569,14 +546,12 @@
         const goBack = () => {
             if (now > 0) {
                 moveHist(history[--now])
-
                 future_btn.classList.remove('disabled')
             }
             if (now == 0) {
                 past_btn.classList.add('disabled')
-                submit_date.classList.add('d-none')
+                submit_docs.classList.add('d-none')
                 submit_docs.classList.remove('opacity_1')
-
             }
         }
 
@@ -586,6 +561,7 @@
                 past_btn.classList.remove('disabled')
             }
             if (now == history.length - 1) future_btn.classList.add('disabled')
+            submit_docs.classList.remove('d-none')
         }
 
         function moveHist(arr) {
