@@ -9,9 +9,7 @@ document.querySelectorAll(".card_form input").forEach(input => {
             if (input.type === 'date') {
                 input.classList.add('focus_valid')
             }
-            if (input.dataset.type === 'CI') {
-                input.value = 'V'
-            }
+            
             input.nextElementSibling.classList.add('focus_valid')
             
         }

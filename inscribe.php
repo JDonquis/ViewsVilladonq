@@ -33,7 +33,7 @@
                     <legend>INGRESA LOS SIGUIENTES DATOS PARA COMENZAR LA INSCRIPCIÓN:</legend>
                         
                             <span>
-                                <input type="text" data-type="CI" id="ins_ci" pattern="[A-Za-z]{1}[0-9]{8}" title="Debe escribir una letra 'V' seguida de 8 números" name="ins_ci">
+                                <input type="text" data-type="CI" id="ins_ci" pattern="[0-9]{8}" title="Debe escribir una letra 'V' seguida de 8 números" name="ins_ci">
                                 <label for="ins_ci">CI: </label>
                             </span>
                          
@@ -93,7 +93,7 @@
                         </div>
                         <div class="d-grid">
                             <span>
-                                <input type="text" data-type="CI" id="ins_DNI" pattern="[A-Za-z]{1}[0-9]{8}" title="Debe escribir una letra 'V' seguida de 8 números" name="DNI_s">
+                                <input type="text" data-type="CI" id="ins_DNI" pattern="[0-9]{8}" title="Debe escribir una letra 'V' seguida de 8 números" name="DNI_s">
                                 <label for="ins_DNI">DNI: </label>
                             </span>
                             <span>
