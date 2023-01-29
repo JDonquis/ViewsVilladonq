@@ -67,15 +67,15 @@ $color-red: rgb(139, 0, 0);
   position: fixed;
   width: 100%;
   background: $bg;
-  height: 100vh;
+  height: 100vh; 
   top: 0;
   left: 0;
   z-index: 1039 !important;
   &.full_screen_down {
-    transform: translateY(100vh);
-  }
+    top: 0;
+  } 
 }
-.full-screen {
+.full-screen { 
   @include full-screen();
 }
 .flex-center {
@@ -245,10 +245,10 @@ fieldset {
       animation: moveShadows 1.6s linear infinite;
       @for $i from 1 through 7 {
         &:nth-of-type(#{$i}) {
-          animation-delay: #{$i / 10 + $i/10 - 0.2}s;
+          animation-delay: calc(#{$i / 10 + $i/10 - 0.2}s);    
         }
       }
-    }
+    } 
   }
   @keyframes moveShadows {
     0% {

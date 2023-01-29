@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/pages/home.css">
     
     <title>VillaDonq</title>
-</head>  
+</head>   
 
 <body>
 
@@ -67,7 +67,9 @@
     <header class="home_header container">
 
          <div>
-             <h1 > La escuela del <span>futuro</span> ya llegó a prestarte la mejor educación.</h1>             
+             <h1 > La escuela del <span>futuro</span> ya llegó a prestarte la mejor <span>educación.</span> </h1>         
+             <span class="parent_btn_submit parent_inscribe_link"><a href="inscribe.php" class="link_to_inscribe btn_submit transition_link">Inscribete</a></span>
+
          </div>
 
 
@@ -85,7 +87,6 @@
                     </div>
                 </div>
             
-                <span class="parent_btn_submit parent_inscribe_link"><a href="inscribe.php" class="link_to_inscribe btn_submit transition_link">Inscribete</a></span>
             </div> 
         </div>
     

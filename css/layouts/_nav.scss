@@ -15,7 +15,20 @@ $nav_height : 90x;
     } 
  
     .logo>* { 
-        max-width: 250px;
+        width: clamp(30px, 9vw, 50px);
+        position: relative;
+        // top: 3px;
+    }
+    .link_to_home {
+        display: flex;
+        align-items: center; 
+    }
+    .text_logo {
+        display: none;
+        @media (min-width:600px) {
+            display: block;
+            margin-left: 20px;
+        }
     }
 
     .nav_content {
@@ -114,16 +127,17 @@ $nav_height : 90x;
         }
 
         .entrar-btn { 
-            width: 60px;
-            padding-block: 1px;
+            width: 70px;
+            padding-block: 9px;  
             background: transparent;
             border: 1px solid $color3;
             position: relative;
+            border-radius: 17px;
             overflow: hidden;
             transition: all .4s ease;
             opacity: .9;
             &:before, &:after {
-                content: '';
+                content: '';  
                 position: absolute;
                 background-color: $color4;
                 width: 100%;

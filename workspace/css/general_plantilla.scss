@@ -1,6 +1,6 @@
 @import "../../css/base";
-@import "../../css/_components";
-
+@import "../../css/_components"; 
+ 
 @font-face {
   font-family: "Encode Sans SemiExpanded";
   src: url("../../css/fonts/EncodeSansSemiExpanded-bold.ttf");
@@ -13,9 +13,9 @@
   font-family: "Encode Sans SemiExpanded";
   src: url("../../css/fonts/EncodeSansSemiExpanded-Medium.ttf");
   font-weight: 500; }
-@font-face {
+@font-face {  
   font-family: "Encode Sans SemiExpanded";
-  src: url("../../css/fonts/EncodeSansSemiExpanded-Regular.ttf");
+  src: url("../../css/fonts/EncodeSansSemiExpanded-Regular.ttf"); 
   font-weight: 400; }
 @font-face {
   font-family: "Encode Sans SemiExpanded";
@@ -91,7 +91,7 @@ a.active {
     font-size: 14px !important;
     background: $color1;
     color: $color4 !important; 
-    max-width: 60px;
+    max-width: 90px;
   }
   .buttons-colvis {
     max-width: 130px;

@@ -213,7 +213,7 @@ document.querySelector('body').onclick = (e) =>{
 
 			UpdateOptionsSections(actual_year)
 			selected_for_change_one = {table_section: actual_table.dataset.section, tr: el.closest('tr')}
-
+			toastr.success(`Se cambió a ${first} a la sección ${select.value}`)
 			// const isThere = tables_selected.findIndex(obj => obj.table == selected_table)
 			// if (isThere != -1) {
 			// 	tables_selected[isThere].students.push(el.closest('tr'))

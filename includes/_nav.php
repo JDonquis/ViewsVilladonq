@@ -3,11 +3,12 @@
 <nav class="main_nav">
         <div class="container">  
 
-            <a href="/VillaDonq/index.php" class="transition_link">
+            <a href="/VillaDonq/index.php" class="transition_link link_to_home">
                 <picture class="logo transition_link">
-                    <source media="(min-width: 700px)" srcset="img/logo_small.png" class="transition_link">
-                    <img src="img/logo.png" alt="" class="transition_link">
+                    <source media="(min-width: 700px)" srcset="img/logo_oficial.svg" class="transition_link">
+                    <img src="img/logo_oficial.svg" alt="" class="transition_link">
                 </picture>
+                <span class="text_logo">VILLADONQ</span>
             </a>
             <div class="nav-section">
                 <button class="entrar-btn trigger_modal" data-modal="login_form">Entrar</button>
@@ -21,7 +22,7 @@
             </div>
             <div class="nav_content modal">
                 <ul>
-                    <li><span>Navigation</span></li>
+                    <li><span>Navegación</span></li>
                     <li><a class="nav_links" href="#">Home</a></li>
                     <li><a class="nav_links" href="blog/index.html">Blog</a></li>
                     <li><a class="nav_links" href="#">Contacto</a></li>

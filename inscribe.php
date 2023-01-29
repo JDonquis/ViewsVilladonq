@@ -27,7 +27,7 @@
             <h1>Inscribete en VILLADONQ y recibe la mejor educación</h1>
         </div>
         <!-- check ci and year cupo -->
-        <form class="inscribe">
+        <form class="inscribe" style="display: none" >
             <div class="card_form" >
                 <fieldset>
                     <legend>INGRESA LOS SIGUIENTES DATOS PARA COMENZAR LA INSCRIPCIÓN:</legend>
@@ -52,7 +52,7 @@
         </form>
 
 
-        <form class="inscribe" style="display: none" id="form-file" action="" method="POST" enctype="multipart/form-data">
+        <form class="inscribe"   id="form-file" action="" method="POST" enctype="multipart/form-data">
             <?php if (isset($_GET['fail-size'])) { ?>
 
                 <div class="message-fail-size">Tamaño de archivo no permitido. Procure que sean menor de 2MB</div>

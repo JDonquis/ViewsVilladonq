@@ -1,4 +1,5 @@
-
+@import "./general_plantilla.scss"; 
+ 
 .intro_table {
     #input_n_classes {
         width: 50px !important;
@@ -12,7 +13,7 @@
         &.disabled {
             opacity: .3;
             &:hover {
-                color: inherit;
+                color: inherit; 
                 cursor: default;
             }
         }

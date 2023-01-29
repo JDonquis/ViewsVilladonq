@@ -46,16 +46,10 @@
             <section class="content">
                 <div class="container-fluid">
                     <section class="card p-3">
-                        <h2 class="h3">Periodo de inscripción nuevo año escolar 2023</h2>
+                        <h2 class="h4">Periodo de inscripción nuevo año escolar 2023</h2>
                         <div class="form-group">
 
                             <form class="d-md-flex " id="date-form">
-                                <!-- <label> Inicio
-                            <input class="d-block" type="date">
-                        </label>
-                        <label> Cierre
-                            <input class="d-block" type="date">
-                        </label> -->
 
                                 <div class="form-group">
                                     <label>Inicio:
@@ -68,7 +62,8 @@
                                     </label>
                                 </div>
                                 <span class="parent_btn_submit ">
-                                    <input title='Ctrl + s' type="submit" name="save-date" value="Guardar fecha" class="btn_submit mt-4 ml-3 d-none p-2" id="date_btn"></span>
+                                    <input title='Ctrl + s' type="submit" name="save-date" value="Guardar fecha" class="btn_submit mt-4 ml-md-3 d-none p-2" id="date_btn">
+                                </span>
                             </form>
                     </section>
 

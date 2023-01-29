@@ -3,20 +3,41 @@
 @import '../_components.scss'; 
 @import '../layouts/_login.scss'; 
 @import '../mySlider.scss';
+ 
 
-
-h1 { 
+h1 {  
     margin-block: 25px;
-    color: rgba(255, 255, 255, 0.863);
+    color: rgba(255, 255, 255, 0.863); 
     @media (min-width: 700px) {
         max-block: none;
-        font-size: $bigFont;   
-        border-left: 7.5px solid $color3;   
+        font-size: $bigFont;    
+        border-left: 7.5px solid $color4;   
         padding-left: 30px;     
     }       
-    span {
-        background: $color2;   
+    span:nth-child(1) {
+        background-image: linear-gradient(to right, #278ea5, #21e6c200 50%);
+        // color: #081f3d;
+        background-size: 200% 100%;
+        background-position: -100%;  
+        animation: bg0 1s forwards;
+        animation-delay: .7s;
     } 
+    
+    span:nth-child(2) {
+        background-image: linear-gradient(to right, #278ea5, #21e6c200 50%);
+        // color: #081f3d;
+        background-size: 200% 100%;
+        background-position: -100%;  
+        animation: bg0 1.5s forwards;
+        animation-delay: 1s;
+    }
+    @keyframes bg0 {
+        to {
+            background-position: 0;  
+        }
+    }
+    
+   
 }
 .parent_inscribe_link {
     position: absolute;
@@ -67,15 +88,15 @@ h1 {
     //     transform: translate(-50%, -50%);  
     //     border: 1px solid $color3;
 
-    // } 
-    &:before {
+    // }     
+    &:before {  
         box-sizing: border-box;
         content: '';
         position: absolute;
         width: calc(#{$size_square} + 29px);
         height: calc(#{$size_square} + 29px);
         border-radius: 50%;
-        left: 50%;
+        left: 50%; 
         top: 50%;
         transform: translate(-50%, -50%);  
         border: solid 5px ;  

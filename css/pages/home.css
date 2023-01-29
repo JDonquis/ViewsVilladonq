@@ -58,7 +58,7 @@
   z-index: 1039 !important;
 }
 .full-screen.full_screen_down {
-  transform: translateY(100vh);
+  top: 0;
 }
 
 .flex-center {
@@ -247,7 +247,7 @@ fieldset {
   z-index: 100;
 }
 .screenShow.full_screen_down {
-  transform: translateY(100vh);
+  top: 0;
 }
 .screenShow.hidden_screen_loader {
   transition: 0.6s ease;
@@ -288,32 +288,32 @@ fieldset {
           animation: moveShadows 1.6s linear infinite;
 }
 .screenShow .shadowsLoader span:nth-of-type(1) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  -webkit-animation-delay: calc(0s);
+          animation-delay: calc(0s);
 }
 .screenShow .shadowsLoader span:nth-of-type(2) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation-delay: calc(0.2s);
+          animation-delay: calc(0.2s);
 }
 .screenShow .shadowsLoader span:nth-of-type(3) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  -webkit-animation-delay: calc(0.4s);
+          animation-delay: calc(0.4s);
 }
 .screenShow .shadowsLoader span:nth-of-type(4) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  -webkit-animation-delay: calc(0.6s);
+          animation-delay: calc(0.6s);
 }
 .screenShow .shadowsLoader span:nth-of-type(5) {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  -webkit-animation-delay: calc(0.8s);
+          animation-delay: calc(0.8s);
 }
 .screenShow .shadowsLoader span:nth-of-type(6) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: calc(1s);
+          animation-delay: calc(1s);
 }
 .screenShow .shadowsLoader span:nth-of-type(7) {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  -webkit-animation-delay: calc(1.2s);
+          animation-delay: calc(1.2s);
 }
 @-webkit-keyframes moveShadows {
   0% {
@@ -374,7 +374,21 @@ fieldset {
   align-items: center;
 }
 .main_nav .logo > * {
-  max-width: 250px;
+  width: clamp(30px, 9vw, 50px);
+  position: relative;
+}
+.main_nav .link_to_home {
+  display: flex;
+  align-items: center;
+}
+.main_nav .text_logo {
+  display: none;
+}
+@media (min-width: 600px) {
+  .main_nav .text_logo {
+    display: block;
+    margin-left: 20px;
+  }
 }
 .main_nav .nav_content {
   position: fixed;
@@ -392,7 +406,7 @@ fieldset {
   z-index: 111 !important;
 }
 .main_nav .nav_content.full_screen_down {
-  transform: translateY(100vh);
+  top: 0;
 }
 .main_nav .nav_content span {
   font-size: calc(clamp(28px, 6vw, 60px) - 16px);
@@ -474,11 +488,12 @@ fieldset {
   stroke: #21e6c1;
 }
 .main_nav .nav-section .entrar-btn {
-  width: 60px;
-  padding-block: 1px;
+  width: 70px;
+  padding-block: 9px;
   background: transparent;
   border: 1px solid #278ea5;
   position: relative;
+  border-radius: 17px;
   overflow: hidden;
   transition: all 0.4s ease;
   opacity: 0.9;
@@ -685,11 +700,11 @@ fieldset {
   justify-content: center;
   align-items: center;
   color: white;
-  top: -100%;
+  top: -150%;
   transition: all 0.3s ease;
 }
 .login_form.full_screen_down {
-  transform: translateY(100vh);
+  top: 0;
 }
 .login_form .close_btn {
   position: absolute;
@@ -802,6 +817,9 @@ fieldset {
   font-size: 18px;
   width: 100%;
   outline: none;
+}
+.login_form fieldset {
+  top: -60px;
 }
 .login_form fieldset legend {
   padding-top: 70px;
@@ -939,12 +957,37 @@ h1 {
   h1 {
     max-block: none;
     font-size: clamp(28px, 6vw, 60px);
-    border-left: 7.5px solid #278ea5;
+    border-left: 7.5px solid #21e6c1;
     padding-left: 30px;
   }
 }
-h1 span {
-  background: #1f4287;
+h1 span:nth-child(1) {
+  background-image: linear-gradient(to right, #278ea5, rgba(33, 230, 194, 0) 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-animation: bg0 1s forwards;
+          animation: bg0 1s forwards;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+h1 span:nth-child(2) {
+  background-image: linear-gradient(to right, #278ea5, rgba(33, 230, 194, 0) 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-animation: bg0 1.5s forwards;
+          animation: bg0 1.5s forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+@-webkit-keyframes bg0 {
+  to {
+    background-position: 0;
+  }
+}
+@keyframes bg0 {
+  to {
+    background-position: 0;
+  }
 }
 
 .parent_inscribe_link {

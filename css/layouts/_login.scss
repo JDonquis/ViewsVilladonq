@@ -17,7 +17,7 @@
     @include full-screen($color3);
     @include flex-center();
     color: white;
-    top: -100%;
+    top: -150%;
 
     transition: all .3s ease;
 
@@ -35,17 +35,18 @@
             path {
                 stroke: $color4
             }
-        }
+        }  
 
         path {
             stroke: $color1;
-        }
+        } 
      
     }    
 
     @include card-form();
 
     fieldset {  
+        top: -60px;
         legend {
             padding-top: 70px;
         }

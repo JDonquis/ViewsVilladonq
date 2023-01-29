@@ -1,87 +1,856 @@
-/*
-Error: Undefined variable: "$color3".
-        on line 10 of C:\xampp\htdocs\views_villadonq\workspace\css\asistencia.scss
+@charset "UTF-8";
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../fonts/EncodeSansSemiExpanded-bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../fonts/EncodeSansSemiExpanded-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../fonts/EncodeSansSemiExpanded-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../fonts/EncodeSansSemiExpanded-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../fonts/EncodeSansSemiExpanded-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../fonts/Comfortaa-bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../fonts/Comfortaa-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../fonts/Comfortaa-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../fonts/Comfortaa-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../fonts/Comfortaa-Light.ttf");
+}
+/* colores */
+.full-screen {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.582);
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1039 !important;
+}
+.full-screen.full_screen_down {
+  top: 0;
+}
 
-5:         min-width: 50px !important;
-6:     }
-7:     .history_arrows {
-8:         &:hover {
-9:             cursor: pointer;
-10:             color: $color3;
-11:         } 
-12:         &.disabled {
-13:             opacity: .3;
-14:             &:hover {
-15:                 color: inherit;
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-Backtrace:
-C:\xampp\htdocs\views_villadonq\workspace\css\asistencia.scss:10
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-C:/Program Files/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
-C:/Program Files/Koala/bin/sass:22:in `load'
-C:/Program Files/Koala/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$color3\".\A         on line 10 of C:\xampp\htdocs\views_villadonq\workspace\css\asistencia.scss\A \A 5:         min-width: 50px !important;\A 6:     }\A 7:     .history_arrows {\A 8:         &:hover {\A 9:             cursor: pointer;\A 10:             color: $color3;\A 11:         } \A 12:         &.disabled {\A 13:             opacity: .3;\A 14:             &:hover {\A 15:                 color: inherit;"; }
+.container {
+  width: clamp(300px, 85%, 1100px);
+  margin: auto;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  color: inherit;
+  padding: 0;
+  color: white;
+  font-family: "Comfortaa", sans-serif;
+}
+
+body {
+  background: #081f3d;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Encode Sans SemiExpanded", serif;
+}
+h1 *,
+h2 *,
+h3 *,
+h4 *,
+h5 *,
+h6 * {
+  font-family: "Encode Sans SemiExpanded", serif;
+}
+
+input {
+  outline: none;
+  border: NONE;
+}
+
+button {
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+}
+
+fieldset {
+  border: none;
+}
+
+.bottomToUp {
+  opacity: 0;
+  position: relative;
+  -webkit-animation: bottomToUp 1s ease;
+          animation: bottomToUp 1s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  transform: translateY(70px);
+}
+@-webkit-keyframes bottomToUp {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes bottomToUp {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.TopToDown {
+  opacity: 0;
+  position: relative;
+  -webkit-animation: TopToDown 1s ease;
+          animation: TopToDown 1s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  transform: translateY(-70px);
+}
+@-webkit-keyframes TopToDown {
+  to {
+    opacity: 1;
+    transform: inherit;
+  }
+}
+@keyframes TopToDown {
+  to {
+    opacity: 1;
+    transform: inherit;
+  }
+}
+
+.leftToRight {
+  opacity: 0;
+  transform: translateX(-100px);
+  -webkit-animation: leftToRight 1s ease;
+          animation: leftToRight 1s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes leftToRight {
+  to {
+    transform: inherit;
+    opacity: 1;
+  }
+}
+@keyframes leftToRight {
+  to {
+    transform: inherit;
+    opacity: 1;
+  }
+}
+
+.opacity_1 {
+  opacity: 0;
+  -webkit-animation: opacity_1 1s ease;
+          animation: opacity_1 1s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes opacity_1 {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opacity_1 {
+  to {
+    opacity: 1;
+  }
+}
+
+.width_0 {
+  width: 0%;
+  -webkit-animation: width_0 2s ease;
+          animation: width_0 2s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes width_0 {
+  to {
+    width: 100%;
+  }
+}
+@keyframes width_0 {
+  to {
+    width: 100%;
+  }
+}
+
+.screenShow {
+  position: fixed;
+  width: 100%;
+  background: #278ea5;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1039 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 100;
+}
+.screenShow.full_screen_down {
+  top: 0;
+}
+.screenShow.hidden_screen_loader {
+  transition: 0.6s ease;
+  transition-delay: 0.1s;
+  transform: translateX(-100%);
+}
+.screenShow.toUp {
+  -webkit-animation: toUp 0.5s ease forwards;
+          animation: toUp 0.5s ease forwards;
+}
+@-webkit-keyframes toUp {
+  0% {
+    transform: translateY(200vh);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes toUp {
+  0% {
+    transform: translateY(200vh);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.screenShow .shadowsLoader {
+  width: max(300px, 50%);
+  height: 360px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 40px;
+  border-radius: 3px;
+}
+.screenShow .shadowsLoader span {
+  color: hsl(191deg, 80%, 33%);
+  -webkit-animation: moveShadows 1.6s linear infinite;
+          animation: moveShadows 1.6s linear infinite;
+}
+.screenShow .shadowsLoader span:nth-of-type(1) {
+  -webkit-animation-delay: calc(0s);
+          animation-delay: calc(0s);
+}
+.screenShow .shadowsLoader span:nth-of-type(2) {
+  -webkit-animation-delay: calc(0.2s);
+          animation-delay: calc(0.2s);
+}
+.screenShow .shadowsLoader span:nth-of-type(3) {
+  -webkit-animation-delay: calc(0.4s);
+          animation-delay: calc(0.4s);
+}
+.screenShow .shadowsLoader span:nth-of-type(4) {
+  -webkit-animation-delay: calc(0.6s);
+          animation-delay: calc(0.6s);
+}
+.screenShow .shadowsLoader span:nth-of-type(5) {
+  -webkit-animation-delay: calc(0.8s);
+          animation-delay: calc(0.8s);
+}
+.screenShow .shadowsLoader span:nth-of-type(6) {
+  -webkit-animation-delay: calc(1s);
+          animation-delay: calc(1s);
+}
+.screenShow .shadowsLoader span:nth-of-type(7) {
+  -webkit-animation-delay: calc(1.2s);
+          animation-delay: calc(1.2s);
+}
+@-webkit-keyframes moveShadows {
+  0% {
+    box-shadow: 0 0 0 #081f3d;
+    opacity: 0;
+    transform: translateX(-50px) scale(1);
+  }
+  50% {
+    box-shadow: 0 10px 50px #081f3d;
+    transform: translateX(0px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 0 #081f3d;
+    opacity: 0;
+    transform: translateX(50px) scale(1);
+  }
+}
+@keyframes moveShadows {
+  0% {
+    box-shadow: 0 0 0 #081f3d;
+    opacity: 0;
+    transform: translateX(-50px) scale(1);
+  }
+  50% {
+    box-shadow: 0 10px 50px #081f3d;
+    transform: translateX(0px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 0 #081f3d;
+    opacity: 0;
+    transform: translateX(50px) scale(1);
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.gradient_blue {
+  background: rgb(8, 31, 61);
+  background: linear-gradient(72deg, rgb(8, 31, 61) 41%, rgb(39, 142, 165) 100%);
+}
+
+.btn_submit {
+  outline: none !important;
+  background: transparent;
+  padding: 12px;
+  display: block;
+  transition: all 0.4s ease;
+  margin-top: 70px;
+  width: 100%;
+  background-image: linear-gradient(to right, #278ea5, #21e6c1 50%);
+  color: #081f3d;
+  background-size: 200% 100%;
+  background-position: -100%;
+  font-weight: bold;
+  z-index: 10;
+}
+.btn_submit:hover {
+  cursor: pointer;
+  color: white;
+  background-position: 0;
+}
+.btn_submit:hover .parent_btn_submit::after {
+  left: 0;
+}
+
+.parent_btn_submit.clicked:before {
+  content: "Procesando...";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  background: #081f3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #21e6c1;
+  font-weight: bold;
+}
+.parent_btn_submit.clicked::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  background-color: #21e6c1;
+  height: 5px;
+  width: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px #21e6c1;
+  -webkit-animation: rodearBtn 2s ease-out infinite;
+          animation: rodearBtn 2s ease-out infinite;
+}
+@-webkit-keyframes rodearBtn {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: calc(100% - 20px);
+    bottom: 0;
+  }
+}
+@keyframes rodearBtn {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: calc(100% - 20px);
+    bottom: 0;
+  }
+}
+
+.feedback_message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  width: 300px;
+  height: 60px;
+  transform: translateY(calc(-100% - 20px)) translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 2s ease-out;
+  z-index: 1000;
+}
+.feedback_message.active {
+  -webkit-animation: toDown 3s ease;
+          animation: toDown 3s ease;
+}
+
+@-webkit-keyframes toDown {
+  0% {
+    transform: translateY(calc(-100% - 20px)) translateX(-50%);
+    opacity: 0;
+  }
+  10.5% {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 1;
+  }
+  90.5% {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(calc(-100% - 20px)) translateX(-50%);
+    opacity: 0;
+  }
+}
+
+@keyframes toDown {
+  0% {
+    transform: translateY(calc(-100% - 20px)) translateX(-50%);
+    opacity: 0;
+  }
+  10.5% {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 1;
+  }
+  90.5% {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(calc(-100% - 20px)) translateX(-50%);
+    opacity: 0;
+  }
+}
+.success_feedback {
+  background: green;
+  color: white;
+}
+
+.fail_feedback {
+  background: #081f3d;
+  color: red !important;
+}
+
+.history_arrows:hover {
+  cursor: pointer;
+  color: #278ea5;
+}
+.history_arrows.disabled {
+  opacity: 0.3;
+}
+.history_arrows.disabled:hover {
+  color: inherit;
+  cursor: default;
+}
+
+.nav_fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: self-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 100;
+  gap: 13px;
+  height: 100px;
+}
+.nav_fixed > * {
+  box-shadow: 0px 0px 9px grey;
+}
+
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../../css/fonts/EncodeSansSemiExpanded-bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../../css/fonts/EncodeSansSemiExpanded-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../../css/fonts/EncodeSansSemiExpanded-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../../css/fonts/EncodeSansSemiExpanded-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Encode Sans SemiExpanded";
+  src: url("../../css/fonts/EncodeSansSemiExpanded-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../css/fonts/Comfortaa-bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../css/fonts/Comfortaa-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../css/fonts/Comfortaa-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../css/fonts/Comfortaa-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../css/fonts/Comfortaa-Light.ttf");
+}
+* {
+  color: inherit;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section.content, content-wrapper {
+  padding-bottom: 40px !important;
+}
+
+.main-sidebar {
+  background-color: #081f3d !important;
+}
+
+.wrapper {
+  height: -webkit-min-content !important;
+  height: -moz-min-content !important;
+  height: min-content !important;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+a.active {
+  background: #278ea5 !important;
+}
+
+.main-sidebar {
+  background-color: #081f3d !important;
+  box-shadow: none !important;
+}
+
+.card-header {
+  border-bottom: none !important;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: rgb(255, 255, 255) !important;
+  z-index: 100 !important;
+}
+
+.dt-buttons {
+  max-width: 320px;
+  display: flex;
+}
+.dt-buttons button {
+  font-size: 14px !important;
+  background: #081f3d;
+  color: #21e6c1 !important;
+  max-width: 90px;
+}
+.dt-buttons .buttons-colvis {
+  max-width: 130px;
+}
+
+.bg-1 {
+  background-color: #081f3d !important;
+  color: white;
+}
+
+.bg-2 {
+  background-color: #1f4287 !important;
+  color: white !important;
+}
+
+.bg-3 {
+  background-color: #278ea5 !important;
+}
+
+.bg-4 {
+  background-color: #21e6c1 !important;
+}
+
+.bg-red {
+  background-color: rgb(139, 0, 0);
+}
+
+.color-1 {
+  color: #081f3d;
+}
+
+.color-2 {
+  color: #1f4287;
+}
+
+.color-3 {
+  color: #278ea5;
+}
+
+.color-4 {
+  color: #21e6c1;
+}
+
+.color-red {
+  color: rgb(139, 0, 0);
+}
+
+.add_btn {
+  background: transparent;
+  border: 2px solid #278ea5;
+  border-radius: 500px;
+  color: #278ea5;
+  padding: 2px 10px;
+  transition: all 0.3s ease;
+}
+.add_btn:hover {
+  cursor: pointer;
+  background-color: #081f3d;
+  color: #21e6c1;
+}
+
+.row_table_plan {
+  position: relative;
+  padding-bottom: 100px;
+}
+.row_table_plan tr {
+  transition: all 0.2s;
+}
+.row_table_plan tr.removing {
+  height: 0px;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.row_table_plan .td_valor, .row_table_plan td.borrar {
+  width: 65px !important;
+  min-width: 65px !important;
+}
+.row_table_plan .borrar_btn:hover {
+  cursor: pointer;
+  color: #21e6c1;
+}
+.row_table_plan .td_unidad, .row_table_plan .th_unidad {
+  max-width: 40px;
+  padding-left: 14px !important;
+}
+.row_table_plan .each_cell {
+  padding: 0;
+  min-width: 200px;
+}
+@media (min-width: 500px) {
+  .row_table_plan .each_cell {
+    min-width: 0px;
+  }
+}
+.row_table_plan textarea {
+  height: 50px;
+  padding: 10px;
+  resize: none;
+  z-index: 20 !important;
+  outline: none;
+  border: none !important;
+  width: 100%;
+}
+.row_table_plan textarea p {
+  margin-bottom: 0;
+}
+.row_table_plan textarea::-webkit-scrollbar {
+  width: 0px;
+}
+.row_table_plan tr.inactive {
+  opacity: 0.3;
+  background: #f4f6f9;
+}
+.row_table_plan tr.inactive * {
+  background-color: #f4f6f9;
+}
+.row_table_plan .btn_more {
+  text-align: center;
+  color: #278ea5;
+  transition: all 0.2s;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  background: white;
+  width: 100%;
+}
+.row_table_plan .btn_more:hover {
+  cursor: pointer;
+  background: #081f3d;
+  color: #21e6c1;
+}
+
+.intro_table #input_n_classes {
+  width: 50px !important;
+  min-width: 50px !important;
+}
+.intro_table .history_arrows:hover {
+  cursor: pointer;
+  color: #278ea5;
+}
+.intro_table .history_arrows.disabled {
+  opacity: 0.3;
+}
+.intro_table .history_arrows.disabled:hover {
+  color: inherit;
+  cursor: default;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+.each_cell {
+  min-width: 55px;
+  max-width: 56px !important;
+  word-wrap: break-word;
+  position: relative;
+  transition: all ease 0.2s;
+}
+.each_cell.attended::before {
+  transition: all 0.4s ease;
+  content: "✓";
+  text-align: center;
+  line-height: 3;
+  color: #21e6c1;
+  position: absolute;
+  inset: 0;
+  background: #081f3d;
+}
+.each_cell:hover {
+  cursor: pointer;
+  background: rgba(31, 66, 135, 0.2588235294);
+}
+
+.asist_table {
+  width: 100%;
+}
+.asist_table td,
+.asist_table th {
+  position: relative;
+  overflow: hidden;
+}
+.asist_table td label,
+.asist_table th label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 0px;
+  height: 100%;
+  padding: 12px;
+}
+.asist_table th:not(.th_students, .th_total), .asist_table .each_cell {
+  min-width: 55px !important;
+  max-width: 56px !important;
+  word-wrap: break-word;
+}
+
+.th_students,
+tr td:first-child {
+  min-width: 215px;
+  word-wrap: break-word;
+  position: -webkit-sticky;
+  position: sticky;
+  background: white;
+  border: none !important;
+  outline: 1px solid rgb(153, 153, 153);
+  z-index: 50 !important;
+  left: 0;
+}
+.th_students label,
+tr td:first-child label {
+  padding-left: 20px;
+  font-weight: normal !important;
+}
+
+.th_students {
+  z-index: 100 !important;
+}
+
+.th_total {
+  display: sticky;
+  left: 100%;
+}
+
+.min75 {
+  color: #081f3d;
+  font-weight: bold;
+}/*# sourceMappingURL=asistencia.css.map */
