@@ -2,7 +2,7 @@
 // all the UI of the .card_form, like the animation when is focus one of its inputs
 document.querySelectorAll(".card_form input").forEach(input => {
     if (input.type !== 'file' && input.type !== 'submit') {
-        if (input.value) {
+        if (input.value ) {
             input.nextElementSibling.classList.add('focus_valid')
         }
         input.onfocus = () =>{ 

@@ -150,6 +150,13 @@ const select = change_box.querySelector(`select`)
 
 let status_change_box = 0
 
+// function to get the data of all students
+function getDataStudents() {
+	return [...document.querySelectorAll('i[data-id]')].map((el) => {
+		return {id: el.dataset.id, ano: el.dataset.year, seccion: el.closest('table').dataset.section[1]}
+	})
+}
+
 document.querySelector('body').onclick = (e) =>{
 	const el = e.target	
 
@@ -158,6 +165,11 @@ document.querySelector('body').onclick = (e) =>{
 		status_change_box = 0
 		selected_for_change_one.tr?.querySelector('i').classList.remove('color-4')
 	} 
+
+	//btn guardar
+	if (el.classList.contains('btn_submit')){
+		console.log(getDataStudents())
+	}
 
 	// event: click on crear una nueva sección ************************************+
 	if (el.classList.contains('add_btn')) {
@@ -304,7 +316,7 @@ document.querySelector('body').onclick = (e) =>{
 				div_sections.pop()
 				const section = div_sections.sort()[0].substring(1)
 				const row = table.row(i).data()
-				$(`table[data-section="${section}"]`).DataTable().row.add(row).draw().responsive.recalc()
+				
 				updateNroStudents(section)
 			}	
 		}

@@ -133,7 +133,7 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td></td>
+                                                    <td ></td>
                                                     <td><input type="checkbox" name=""></td>
                                                     <td>Juan Francisco</td>
                                                     <td>Villasmil Tovar</td>
@@ -142,7 +142,7 @@
                                                     <td>22</td>
                                                     <td>0426037352</td>
                                                     <td>juanvillans16@gmail.com</td>
-                                                    <td class="td_action"><i data-year="1" title="Cambiar de sección" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
+                                                    <td class="td_action"><i data-id="1" data-year="1" title="Cambiar de sección"  class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
 
                                                         </i></td>
                                                 </tr>
@@ -156,7 +156,7 @@
                                                     <td>22</td>
                                                     <td>0426037352</td>
                                                     <td>juanvillans16@gmail.com</td>
-                                                    <td class="td_action"><i data-year="1" title="Cambiar de sección" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
+                                                    <td class="td_action"><i data-year="1" title="Cambiar de sección" data-id="2" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
 
                                                         </i></td>
                                                 </tr>
@@ -170,7 +170,7 @@
                                                     <td>20</td>
                                                     <td>0212438719</td>
                                                     <td>dalexercivirigua@gmail.com</td>
-                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
+                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" data-id="3" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
 
                                                         </i></td>
                                                 </tr>
@@ -184,7 +184,7 @@
                                                     <td>20</td>
                                                     <td>0212438719</td>
                                                     <td>dalexercivirigua@gmail.com</td>
-                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
+                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" data-id="4" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
 
                                                         </i></td>
                                                 </tr>
@@ -198,7 +198,7 @@
                                                     <td>20</td>
                                                     <td>0212438719</td>
                                                     <td>dalexercivirigua@gmail.com</td>
-                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
+                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" data-id="5" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
 
                                                         </i></td>
                                                 </tr>
@@ -212,7 +212,7 @@
                                                     <td>15</td>
                                                     <td>0269356969</td>
                                                     <td>mondonquis@gmail.com</td>
-                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" class="btn_change_solo fas fa-person-walking-dashed-line-arrow-right"></i>
+                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" data-id="6" class="btn_change_solo fas fa-person-walking-dashed-line-arrow-right"></i>
 
                                                     </td>
                                                 </tr>
@@ -259,7 +259,7 @@
                                                     <td>22</td>
                                                     <td>0426037352</td>
                                                     <td>juanvillans16@gmail.com</td>
-                                                    <td class="td_action"><i data-year="1" title="Cambiar de sección" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
+                                                    <td class="td_action"><i data-year="1" title="Cambiar de sección" data-id="7" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
 
                                                         </i></td>
                                                 </tr>
@@ -274,7 +274,7 @@
                                                     <td>20</td>
                                                     <td>0212438719</td>
                                                     <td>dalexercivirigua@gmail.com</td>
-                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
+                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" data-id="8" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
 
                                                         </i></td>
                                                 </tr>
@@ -288,7 +288,7 @@
                                                     <td>15</td>
                                                     <td>0269356969</td>
                                                     <td>mondonquis@gmail.com</td>
-                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" class="btn_change_solo fas fa-person-walking-dashed-line-arrow-right"></i>
+                                                    <td class="td_action"><i data-year="1" title="Mover a otra sección" data-id="9" class="btn_change_solo fas fa-person-walking-dashed-line-arrow-right"></i>
 
                                                     </td>
                                                 </tr>
@@ -357,7 +357,7 @@
                                                     <td>22</td>
                                                     <td>0426037352</td>
                                                     <td>juanvillans16@gmail.com</td>
-                                                    <td class="td_action"><i data-year="2" title="Cambiar de sección" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
+                                                    <td class="td_action"><i data-year="2" title="Cambiar de sección" data-id="10" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
 
                                                         </i></td>
                                                 </tr>
@@ -371,7 +371,7 @@
                                                     <td>20</td>
                                                     <td>0212438719</td>
                                                     <td>dalexercivirigua@gmail.com</td>
-                                                    <td class="td_action"><i data-year="2" title="Mover a otra sección" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
+                                                    <td class="td_action"><i data-year="2" title="Mover a otra sección" data-id="11" class="btn_change_solo p-relative fas fa-person-walking-dashed-line-arrow-right">
 
                                                         </i></td>
                                                 </tr>
@@ -385,7 +385,7 @@
                                                     <td>15</td>
                                                     <td>0269356969</td>
                                                     <td>mondonquis@gmail.com</td>
-                                                    <td class="td_action"><i data-year="2" title="Mover a otra sección" class="btn_change_solo fas fa-person-walking-dashed-line-arrow-right"></i>
+                                                    <td class="td_action"><i data-year="2" title="Mover a otra sección" data-id="12" class="btn_change_solo fas fa-person-walking-dashed-line-arrow-right"></i>
 
                                                     </td>
                                                 </tr>
