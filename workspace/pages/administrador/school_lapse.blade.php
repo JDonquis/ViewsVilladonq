@@ -17,21 +17,21 @@
                                 <label for="" class="pt-2">Comienza: </label>
                                 <input type="date" name="start-1" class="form-control">
                                 <label for="" class="pt-2">Termina: </label>
-                                <input type="date" name="end-1" class="form-control">
+                                <input disabled type="date" name="end-1" class="form-control">
                             </div>
                             <div class="col-3">
                                 <h4>2do Lapso</h4>
                                 <label for="" class="pt-2">Comienza: </label>
-                                <input type="date" name="start-2" class="form-control">
+                                <input disabled type="date" name="start-2" class="form-control">
                                 <label for="" class="pt-2">Termina: </label>
-                                <input type="date" name="end-2" class="form-control">
+                                <input disabled type="date" name="end-2" class="form-control">
                             </div>
                             <div class="col-3">
                                 <h4>3er Lapso</h4>
                                 <label for="" class="pt-2">Comienza: </label>
-                                <input type="date" name="start-3" class="form-control">
+                                <input disabled type="date" name="start-3" class="form-control">
                                 <label for="" class="pt-2">Termina: </label>
-                                <input type="date" name="end-3" class="form-control">
+                                <input disabled type="date" name="end-3" class="form-control">
                             </div>
 
     	                </div>
@@ -47,9 +47,11 @@
     <script>
         const all_dateInputs = document.querySelectorAll(`input[type="date"]`)
         all_dateInputs.forEach((inp, indx) => {
+           
             inp.onchange = () => {
                 document.querySelector('.btn_submit').classList.remove('d-none')
                 const next_inp = all_dateInputs[indx+1]
+                next_inp.disabled = false
                 if (next_inp.value < inp.value || !next_inp[indx+1].value ) { 
                     next_inp.min = inp.value
                     next_inp.value = inp.value
@@ -57,6 +59,7 @@
             }
             
         })
+        
     </script>
 
 @endsection()
