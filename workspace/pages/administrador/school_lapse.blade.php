@@ -49,15 +49,13 @@
         all_dateInputs.forEach((inp, indx) => {
             inp.onchange = () => {
                 document.querySelector('.btn_submit').classList.remove('d-none')
-                next_inp = all_dateInputs[indx+1]
+                const next_inp = all_dateInputs[indx+1]
                 if (next_inp.value < inp.value || !next_inp[indx+1].value ) { 
                     next_inp.min = inp.value
                     next_inp.value = inp.value
                 }
             }
-            inp.onfocus = () => {
-                inp.min
-            }
+            
         })
     </script>
 

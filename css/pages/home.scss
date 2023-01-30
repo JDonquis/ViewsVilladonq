@@ -21,6 +21,7 @@ h1 {
         background-position: -100%;  
         animation: bg0 1s forwards;
         animation-delay: .7s;
+        border-radius: 8px;
     } 
     
     span:nth-child(2) {
@@ -30,6 +31,7 @@ h1 {
         background-position: -100%;  
         animation: bg0 1.5s forwards;
         animation-delay: 1s;
+        border-radius: 8px;  
     }
     @keyframes bg0 {
         to {

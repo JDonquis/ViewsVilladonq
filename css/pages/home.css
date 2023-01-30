@@ -969,6 +969,7 @@ h1 span:nth-child(1) {
           animation: bg0 1s forwards;
   -webkit-animation-delay: 0.7s;
           animation-delay: 0.7s;
+  border-radius: 8px;
 }
 h1 span:nth-child(2) {
   background-image: linear-gradient(to right, #278ea5, rgba(33, 230, 194, 0) 50%);
@@ -978,6 +979,7 @@ h1 span:nth-child(2) {
           animation: bg0 1.5s forwards;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
+  border-radius: 8px;
 }
 @-webkit-keyframes bg0 {
   to {
