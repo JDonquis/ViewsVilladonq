@@ -373,6 +373,7 @@ fieldset {
   background-position: -100%;
   font-weight: bold;
   z-index: 10;
+  border-radius: 3px;
 }
 .btn_submit:hover {
   cursor: pointer;

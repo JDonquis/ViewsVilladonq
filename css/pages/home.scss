@@ -29,7 +29,7 @@ h1 {
         // color: #081f3d;
         background-size: 200% 100%;
         background-position: -100%;  
-        animation: bg0 1.5s forwards;
+        animation: bg0 1.5s forwards;   
         animation-delay: 1s;
         border-radius: 8px;  
     }
@@ -52,7 +52,7 @@ h1 {
         float: right;
         max-width: 115px;
         text-align: center;   
-        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.685);
+        // box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.685);
     }
 
 } 

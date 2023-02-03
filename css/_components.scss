@@ -2,7 +2,7 @@ $width_card_form: 289px;
 $height_card_form: 400px;
 $padding_card_form: 25px;
 
-@mixin card-form($height_card_form: 400px, $width_card_form: 289px) {
+@mixin card-form($height_card_form: 400px, $width_card_form: 289px) {  
 
     .card_form {
         color: white;
@@ -133,6 +133,7 @@ $padding_card_form: 25px;
     background-position: -100%;
     font-weight: bold;
     z-index: 10;
+    border-radius: 3px;
 
     &:hover {
         cursor: pointer;

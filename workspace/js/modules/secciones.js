@@ -312,15 +312,16 @@ document.querySelector('body').onclick = (e) =>{
 
 		if (n_students > 0) {
 			for (let i=0; i<n_students; i++) {
+				console.log(n_students)
 				const div_sections = [...document.querySelectorAll(`.each_year[data-year="${el.dataset.year}"] .n_students`)].map(b => b.textContent + b.dataset.section)
 				div_sections.pop()
 				const section = div_sections.sort()[0].substring(1)
 				const row = table.row(i).data()
-				
+				const destiny_table = $(`table[data-section="${section}"]`).DataTable()
+				destiny_table.row.add(row).draw().responsive.recalc()
 				updateNroStudents(section)
 			}	
 		}
-		
 		
 		document.querySelector(`article[data-section="${el.dataset.section}"]`).remove()
 		--total_sections.textContent

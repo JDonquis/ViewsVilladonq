@@ -373,6 +373,7 @@ fieldset {
   background-position: -100%;
   font-weight: bold;
   z-index: 10;
+  border-radius: 3px;
 }
 .btn_submit:hover {
   cursor: pointer;
@@ -1010,6 +1011,7 @@ body, html {
   color: #081f3d;
   text-align: center;
   font-weight: bold;
+  border-radius: 6px;
 }
 .cont_h1_and_form form.inscribe .arrow_buttons .prev {
   font-size: 50px;

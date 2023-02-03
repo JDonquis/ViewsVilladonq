@@ -47,12 +47,13 @@
     <script>
         const all_dateInputs = document.querySelectorAll(`input[type="date"]`)
         all_dateInputs.forEach((inp, indx) => {
+           if (inp.value) inp.disabled = false
            
             inp.onchange = () => {
                 document.querySelector('.btn_submit').classList.remove('d-none')
                 const next_inp = all_dateInputs[indx+1]
                 next_inp.disabled = false
-                if (next_inp.value < inp.value || !next_inp[indx+1].value ) { 
+                if (next_inp.value < inp.value || !next_inp.value ) { 
                     next_inp.min = inp.value
                     next_inp.value = inp.value
                 }

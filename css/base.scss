@@ -189,14 +189,14 @@ fieldset {
 .opacity_1 { 
   opacity: 0;
   animation: opacity_1 1s ease;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; 
   @keyframes opacity_1 {
     from {
     }
-    to {
-      opacity: 1;
-    }
-  }
+    to { 
+      opacity: 1; 
+    } 
+  } 
 }
 .width_0 {
   width: 0%;
