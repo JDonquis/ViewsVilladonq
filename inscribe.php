@@ -51,7 +51,7 @@
             </div>
         </form>
 
-
+<!-- large inscribe form -->
         <form class="inscribe"   id="form-file" action="" method="POST" enctype="multipart/form-data">
             <?php if (isset($_GET['fail-size'])) { ?>
 
@@ -87,17 +87,17 @@
                             </span>
                             <input type="hidden" id="ins_edad" readonly name="age"> 
                             <span>
-                                <input type="gmail" name="email_s" id="ins_correo">
+                                <input type="email" name="email_s" id="ins_correo">
                                 <label for="ins_correo">Correo: </label>
                             </span>
                         </div>
                         <div class="d-grid">
                             <span>
                                 <input type="text" data-type="CI" id="ins_DNI" pattern="[0-9]{8}" title="Debe escribir una letra 'V' seguida de 8 números" name="DNI_s">
-                                <label for="ins_DNI">DNI: </label>
+                                <label for="ins_DNI">CI: </label>
                             </span>
                             <span>
-                                <input type="tel" id="ins_telefono" name="phone_s">
+                                <input type="tel" id="ins_telefono" name="phone_s" placeholder="">
                                 <label for="ins_telefono">Telefono: </label>
                             </span>
                         </div>
@@ -155,12 +155,16 @@
                         </span>
                         <span>
                             <input type="text" data-type="CI" id="ins_repre_DNI" name="DNI_r">
-                            <label for="ins_repre_DNI">DNI: </label>
+                            <label for="ins_repre_DNI">CI: </label>
                         </span>
                         <span>
                             <input type="tel" id="ins_repre_tel" name="phone_r">
-                            <label for="ins_repre_tel">telefono: </label>
+                            <label for="ins_repre_tel">Telefono: </label>
 
+                        </span>
+                        <span>
+                            <input type="email" id="ins_repre_email" name="name_r">
+                            <label for="ins_repre_email">Correo: </label>
                         </span>
                         <span class="parent_btn_submit"><input type="submit" id="b_form" name="new_request" value="INSCRIBIR" class="inscribirse btn_submit"></span>
 

@@ -1,26 +1,5 @@
 <style>
-    td.subject {
-        width: 300px !important;
-        min-width: 150px;
-    }
-    table {
-        height: 700px;
-        overflow: visible imort !important;
-    }
-    thead {
-        /* position: sticky !important; */
-        top: 0 ;
-    }
-    td.years {
-        width: 150px;
-        min-width: 150px;
-    }
-    td.teachers {
-    }
-    td.teachers ul {
-        display: flex;
-        gap: 7px;
-    }
+
 </style>
 
 
@@ -39,7 +18,7 @@
 
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
-    <link rel="stylesheet" href="../../css/general_plantilla.css">
+    <link rel="stylesheet" href="../../css/materias.css">
 
     <title>Materias</title>
 </head>
@@ -72,7 +51,7 @@
                                 <div class="col-sm-3">
                                     <div class="form-group">
 
-                                        <button for='new_subject_name' class="add_btn"></button>
+                                        <button for='new_subject_name' class="add_btn">Nueva materia</button>
                                         <!-- <input type="text" name="new_subject_name" id="new_subject_name"> -->
                                     </div>
                                 </div>
@@ -84,16 +63,35 @@
                     </div>
                 </div><!-- /.container-fluid -->
             </section>
+            <div class="flex-center full-screen">
+                <form class="new_subject_parent card_form">
+                    
 
+                        <span>
+                            <input type="text" data-type="CI" id="ins_repre_DNI" name="DNI_r">
+                            <label for="ins_repre_DNI">CI: </label>
+                        </span> 
+                        <p class="text-bold">años</p>
+
+                        <label>1<input type="checkbox" name="" id=""></label>
+                        <label>2<input type="checkbox" name="" id=""></label>
+                        <label>3<input type="checkbox" name="" id=""></label>
+                        <label>4<input type="checkbox" name="" id=""></label>
+                        <label>5<input type="checkbox" name="" id=""></label>
+                        <span class="parent_btn_submit"><input type="submit" id="b_form" name="new_request" value="CREAR" class="inscribirse btn_submit"></span>
+
+                   
+                </form>
+            </div>
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
 
                     <div class="row">
                         <div class="col-12">
-                            <div class="card"  style='max-width: 620px'>
+                            <div class="card" style='max-width: 620px'>
                                 <div class="card-header"></div>
-                                <div class="card-body table-responsive p-0" >
+                                <div class="card-body table-responsive p-0">
                                     <table class="table-head-fixed table table-striped table-bordered">
                                         <thead>
                                             <tr>
@@ -133,7 +131,7 @@
                                                 </td>
                                                 <td class="action"><i class="fas fa-edit"></i> -- X</td>
                                                 <td class="teachers">
-                                                    <ul >
+                                                    <ul>
                                                         <li>D. Matheus (1, 2, 3), </li>
                                                         <li>J. Cristina (4, 5), </li>
                                                         <li>D. Matheus (1, 2, 3)</li>
@@ -219,7 +217,7 @@
                                                 </td>
                                                 <td class="action"><i class="fas fa-edit"></i> -- X</td>
                                                 <td class="teachers">
-                                                    <ul >
+                                                    <ul>
                                                         <li>H. Harrinson (1, 2, 3),</li>
                                                         <li>D. Matheus (1, 2, 3) ,</li>
                                                         <li>P. Cruzanda (2, 4),</li>
@@ -270,13 +268,13 @@
 
                     <!-- /.row -->
                 </div>
-                
+
             </section>
             <!-- /.content -->
         </div>
 
-    
-   
+
+
 
     </div>
     <!-- /.content-wrapper -->
@@ -288,6 +286,7 @@
         <!-- Control sidebar content goes here -->
     </aside>
 
+    <script src="../../js/functions/form_functions.js"></script>
 
     <script src="../../plugins/jquery/jquery.min.js"></script>
     <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -296,7 +295,7 @@
     <script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
     <script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
     <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
     <script src="../../plugins/jszip/jszip.min.js"></script>
     <script src="../../plugins/pdfmake/pdfmake.min.js"></script>
     <script src="../../plugins/pdfmake/vfs_fonts.js"></script>

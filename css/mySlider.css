@@ -18,16 +18,7 @@
 }
 .zoom_effect .each_slider_element.zoom_effect_act img {
   transition: 11s all linear;
-  -webkit-animation: zoomAnimation 10s ease;
-          animation: zoomAnimation 10s ease;
-}
-@-webkit-keyframes zoomAnimation {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.2);
-  }
+  animation: zoomAnimation 10s ease;
 }
 @keyframes zoomAnimation {
   0% {

@@ -1,5 +1,6 @@
 
 // all the UI of the .card_form, like the animation when is focus one of its inputs
+console.log('culo')
 document.querySelectorAll(".card_form input").forEach(input => {
     if (input.type !== 'file' && input.type !== 'submit') {
         if (input.value ) {

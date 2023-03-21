@@ -1,0 +1,32 @@
+@import "./general_plantilla.scss"; 
+.parent_editable_img {
+    background-color: $color1;
+    position: relative;
+    max-width: 100px;
+    &::before{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        inset: 0;
+        z-index: 1000;
+    }
+    &:hover:before {
+        content: 'Cambiar';
+        background-color: rgba(255, 255, 255, 0.815);
+
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    .editable_img {
+        width: 100%;
+        object-fit: cover;
+    }
+    input {
+        width: 100%;
+        height: 100%;
+        // opacity: 0;
+        display: none; 
+    }
+}

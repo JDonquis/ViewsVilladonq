@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Encode Sans SemiExpanded";
   src: url("../fonts/EncodeSansSemiExpanded-bold.ttf");
@@ -750,99 +749,33 @@ a.active {
   color: #21e6c1;
 }
 
-.intro_table #input_n_classes {
-  width: 50px !important;
-  min-width: 50px !important;
-}
-.intro_table .history_arrows:hover {
-  cursor: pointer;
-  color: #278ea5;
-}
-.intro_table .history_arrows.disabled {
-  opacity: 0.3;
-}
-.intro_table .history_arrows.disabled:hover {
-  color: inherit;
-  cursor: default;
-}
-
-label:hover {
-  cursor: pointer;
-}
-
-.each_cell {
-  min-width: 55px;
-  max-width: 56px !important;
-  word-wrap: break-word;
+.parent_editable_img {
+  background-color: #081f3d;
   position: relative;
-  transition: all ease 0.2s;
+  max-width: 100px;
 }
-.each_cell.attended::before {
-  transition: all 0.4s ease;
-  content: "✓";
-  text-align: center;
-  line-height: 3;
-  color: #21e6c1;
+.parent_editable_img::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   inset: 0;
-  background: #081f3d;
+  z-index: 1000;
 }
-.each_cell:hover {
+.parent_editable_img:hover:before {
+  content: "Cambiar";
+  background-color: rgba(255, 255, 255, 0.815);
+}
+.parent_editable_img:hover {
   cursor: pointer;
-  background: rgba(31, 66, 135, 0.2588235294);
 }
-
-.asist_table {
+.parent_editable_img .editable_img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.asist_table td,
-.asist_table th {
-  position: relative;
-  overflow: hidden;
-}
-.asist_table td label,
-.asist_table th label {
-  position: absolute;
-  top: 0;
-  left: 0;
+.parent_editable_img input {
   width: 100%;
-  padding-left: 0px;
   height: 100%;
-  padding: 12px;
-}
-.asist_table th:not(.th_students, .th_total), .asist_table .each_cell {
-  min-width: 55px !important;
-  max-width: 56px !important;
-  word-wrap: break-word;
-}
-
-.th_students,
-tr td:first-child {
-  min-width: 215px;
-  word-wrap: break-word;
-  position: sticky;
-  background: white;
-  border: none !important;
-  outline: 1px solid rgb(153, 153, 153);
-  z-index: 50 !important;
-  left: 0;
-}
-.th_students label,
-tr td:first-child label {
-  padding-left: 20px;
-  font-weight: normal !important;
-}
-
-.th_students {
-  z-index: 100 !important;
-}
-
-.th_total {
-  display: sticky;
-  left: 100%;
-}
-
-.min75 {
-  color: #081f3d;
-  font-weight: bold;
-}/*# sourceMappingURL=asistencia.css.map */
+  display: none;
+}/*# sourceMappingURL=perfil_institucion.css.map */
