@@ -822,10 +822,16 @@ tr td:nth-child(1) {
   max-width: 200px !important;
 }
 
-.delete_icon {
-  opacity: 0.1;
-}
-.delete_icon:hover {
-  cursor: pointer;
-  opacity: 1;
+@media (min-width: 400px) {
+  .delete_icon {
+    opacity: 0.1;
+  }
+  .delete_icon:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+  .table-responsive {
+    top: -30px;
+    position: relative;
+  }
 }/*# sourceMappingURL=secciones.css.map */
