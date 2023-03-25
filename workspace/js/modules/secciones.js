@@ -37,12 +37,13 @@ const parent_content = document.querySelector(".content");
 const wrapper = document.querySelector(".content-wrapper");
 const history = [];
 let now_history = "";
-const yearSelect = document.querySelector("#yearInput")
+const yearSelect = document.querySelector("#yearInput");
 
 total_rooms.oninput = () => {
   free_classrooms.textContent = total_rooms.value - total_sections.textContent;
 };
 function saveHistory() {
+  // localStorage.setItem("sections_data", JSON.stringify(getDataStudents()));
   let content = document.querySelector("#content_itself");
   if (now_history < history.length - 1) {
     history.splice(
@@ -61,6 +62,7 @@ function saveHistory() {
 }
 setTimeout(() => {
   saveHistory();
+  // localStorage.setItem("sections_data", JSON.stringify(getDataStudents()));
 }, 500);
 
 function moveHistory() {
@@ -173,7 +175,6 @@ function newTable(year, section) {
 
 let selected_for_change_one = {};
 let tables_selected = [];
-const data = [{}];
 
 const change_box = document.querySelector(`.change_box`);
 const select = change_box.querySelector(`select`);
@@ -181,15 +182,35 @@ const select = change_box.querySelector(`select`);
 let status_change_box = 0;
 
 // function to get the data of all students
-function getDataStudents() {
-	console.log(document.querySelectorAll("[data-id]"))
-  return [...document.querySelectorAll("[data-id]")].map((el) => {
-    return {
-      id: el.dataset.id,
-      ano: yearSelect.value,
-      seccion: el.closest("table").dataset.section,
-    };
-  });
+const data = [];
+function getDataStudents(section, id='') {
+  const actual_year = +yearSelect.value;
+  const isYearThere = data.findIndex((obj) => obj.year === +actual_year);
+  console.log(isYearThere)
+  if (isYearThere >= 0 ) {
+   section in data[isYearThere].sections? data[isYearThere].sections[`${section}`].push(id) :data[isYearThere].sections[`${section}`] = []
+  
+  } else {
+    const new_year = {year: actual_year, sections: {[`${section}`]: [id]}}
+    data.push(new_year)
+  }
+  return data
+  // data.map((obj) => {
+  //   if (obj.año === actual_year) {
+  //     obj[students] = [...document.querySelectorAll("[data-id]")].map((el) => {
+  //       return {
+  //         id: el.dataset.id,
+  //         seccion: el.closest("table").dataset.section,
+  //       };
+  //   }
+  // });
+  // console.log(document.querySelectorAll("[data-id]"));
+  // return [...document.querySelectorAll("[data-id]")].map((el) => {
+  //   return {
+  //     id: el.dataset.id,
+  //     seccion: el.closest("table").dataset.section,
+  //   };
+  // });
 }
 
 document.querySelector("body").onclick = (e) => {
@@ -212,9 +233,9 @@ document.querySelector("body").onclick = (e) => {
   }
 
   //btn guardar
-	if (el.id === 'guardar'){
-		console.log(getDataStudents())
-	}
+  if (el.id === "guardar") {
+    console.log(getDataStudents());
+  }
 
   // event: click on crear una nueva sección ************************************+
   if (el.classList.contains("add_btn")) {
@@ -264,6 +285,9 @@ document.querySelector("body").onclick = (e) => {
     disableOrNotAddBtnSections();
     addDeleteIcon();
     saveHistory();
+    // update data 
+    localStorage.setItem("sections_data", JSON.stringify(getDataStudents(section)));
+
     toastr.success(`Se ha creado la sección: ${year + section} exitosamente`);
   }
 
@@ -289,7 +313,7 @@ document.querySelector("body").onclick = (e) => {
       table_section: actual_table.dataset.section,
       tr: el.closest("tr"),
     };
- 	    // const isThere = tables_selected.findIndex(obj => obj.table == selected_table)
+    // const isThere = tables_selected.findIndex(obj => obj.table == selected_table)
     // if (isThere != -1) {
     // 	tables_selected[isThere].students.push(el.closest('tr'))
     // } else {
@@ -305,6 +329,7 @@ document.querySelector("body").onclick = (e) => {
       let nro_students = 0;
 
       tables_selected.forEach((obj) => {
+        console.log(obj)
         let origin = $(`table[data-section="${obj.table_section}"`).DataTable();
 
         let new_data = origin.rows(obj.students).data();
@@ -323,6 +348,12 @@ document.querySelector("body").onclick = (e) => {
 
         tables_selected = [];
         check_selected_in_year = false;
+        obj.id.forEach(id => {
+          console.log(select.value)
+            localStorage.setItem("sections_data", JSON.stringify(getDataStudents(select.value, id)));
+
+        });
+
       });
       // if (nro_students > 1) toastr.success(`Se cambió a ${first} a la sección ${select.value}`)
       // else
@@ -343,12 +374,15 @@ document.querySelector("body").onclick = (e) => {
       const origin_table = $(
         `table[data-section="${selected_for_change_one.table_section}"`
       ).DataTable();
-	  const name_student = selected_for_change_one.tr.querySelector(`[data-id]`).textContent
+      const name_student =
+        selected_for_change_one.tr.querySelector(`[data-id]`).textContent;
       let new_data = origin_table.row(selected_for_change_one.tr).data();
       let destiny_table = $(`table[data-section="${select.value}"`).DataTable();
       destiny_table.row.add(new_data).draw().responsive.recalc();
       change_box.classList.remove("d-block");
-	  toastr.success(`Se cambió a ${name_student} a la sección ${select.value}`);
+      toastr.success(
+        `Se cambió a ${name_student} a la sección ${select.value}`
+      );
 
       // selected_for_change_one.table.a(status_change_box)
       origin_table.row(selected_for_change_one.tr).remove().draw();
@@ -373,6 +407,7 @@ document.querySelector("body").onclick = (e) => {
     }
     UpdateOptionsSections();
     saveHistory();
+    // localStorage.setItem("sections_data", JSON.stringify(getDataStudents()));
   }
 
   // delete a section *******************************************************
@@ -390,6 +425,7 @@ document.querySelector("body").onclick = (e) => {
         const section = div_sections.sort()[0].substring(1);
         const row = table.row(i).data();
         const destiny_table = $(`table[data-section="${section}"]`).DataTable();
+        console.log(table.querySelector('[data-id]'))
         destiny_table.row.add(row).draw().responsive.recalc();
         updateNroStudents(section);
       }
@@ -408,12 +444,12 @@ document.querySelector("body").onclick = (e) => {
     disableOrNotAddBtnSections();
     addDeleteIcon();
     saveHistory();
+    // localStorage.setItem("sections_data", JSON.stringify(getDataStudents()));
+
     toastr.success(
       `Se ha eliminado la sección ${el.dataset.section} exitosamente`
     );
   }
-
-
 };
 // </ ---------- finish click on body
 const btn_change_all = document.querySelector(".btn_change_all");
@@ -437,10 +473,12 @@ document.onchange = (e) => {
     if (el.checked === true) {
       if (isThere != -1) {
         tables_selected[isThere].students.push(el.closest("tr"));
+        tables_selected[isThere].id.push(tr.querySelector('[data-id]').dataset.id)
       } else {
         tables_selected.push({
           table_section: selected_table.dataset.section,
           students: [el.closest("tr")],
+          id: [tr.querySelector('[data-id]').dataset.id]
         });
       }
     } else {

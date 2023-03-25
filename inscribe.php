@@ -149,10 +149,17 @@
 
                     <fieldset class="each_slider_element">
                         <legend>DATOS DEL REPRESENTANTE</legend>
-                        <span>
-                            <input type="text" id="ins_repre_nombre" name="name_r">
-                            <label for="ins_repre_nombre">Nombre completo: </label>
-                        </span>
+                        <div class="d-grid">
+
+                            <span>
+                                <input type="text" id="ins_repre_nombre" name="name_r">
+                                <label for="ins_repre_nombre">Nombres: </label>
+                            </span>
+                            <span>
+                                <input type="text" id="ins_repre_apellido" name="lastName_r">
+                                <label for="ins_repre_apellido">Apellidos: </label>
+                            </span>
+                        </div>
                         <span>
                             <input type="text" data-type="CI" id="ins_repre_DNI" name="DNI_r">
                             <label for="ins_repre_DNI">CI: </label>
