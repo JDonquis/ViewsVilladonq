@@ -535,6 +535,11 @@ document.querySelector("body").onclick = (e) => {
 
     document.querySelector("#toastsContainerTopRight").remove();
   }
+  if (el == document.querySelector(`#toastsContainerTopRight span`)){
+    console.log('ayyy nojoda')
+    localStorage.removeItem("sections_data");
+
+  }
 };
 // </ ---------- finish click on body
 const btn_change_all = document.querySelector(".btn_change_all");

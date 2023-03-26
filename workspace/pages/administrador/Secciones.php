@@ -90,7 +90,7 @@
                         </div>
                     </div>
                     <div class="text-right año_academico_div bg-1">
-                        <p class="h5 mb-2">En la institución</p>
+                        <p class="h6 mb-2">En la institución</p>
                         <label for="aulas">aulas <input min="19" type="number" class="d-inline form-control col-4 ml-2" name="" value="20" id="total_rooms"></label>
                         <p>Total de secciones: <b id="total_sections">19</b></p>
                         <p>Aulas libres: <b id="free_classrooms">1</b></p>
