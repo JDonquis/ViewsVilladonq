@@ -5,6 +5,7 @@
         &.active {
         	background: $color1 !important;
         	color: $color4 !important;
+            background-color: #500000;
         }
         input[type="checkbox"] { 
         	width: 25px;
@@ -103,4 +104,33 @@
         top: -30px;
         position: relative;
     }
+}
+.each_year {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+.año_academico_div {
+    // background: $color3;
+    display: inline-block;
+    padding: 23px;
+    width: 265px;
+    color: white;
+    height: 180px; 
+    border-radius: 3px;
+    #yearInput{
+        width: 100%;
+    }
+  
+}
+.container_nro_est_y_matricula {
+    position: relative;
+    top: -70px;
+    left: 13px;
+    color: white;
+}
+input:focus, select:focus {
+    border: 1px solid $color4 !important;
+    outline: 1px solid $color4 !important;
 }

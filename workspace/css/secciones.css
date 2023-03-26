@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Encode Sans SemiExpanded";
   src: url("../fonts/EncodeSansSemiExpanded-bold.ttf");
@@ -658,6 +659,7 @@ tr {
 tr.active {
   background: #081f3d !important;
   color: #21e6c1 !important;
+  background-color: #500000;
 }
 tr input[type=checkbox] {
   width: 25px;
@@ -737,4 +739,34 @@ tr td:nth-child(1) {
     top: -30px;
     position: relative;
   }
+}
+.each_year {
+  display: none;
+}
+.each_year.active {
+  display: block;
+}
+
+.año_academico_div {
+  display: inline-block;
+  padding: 23px;
+  width: 265px;
+  color: white;
+  height: 180px;
+  border-radius: 3px;
+}
+.año_academico_div #yearInput {
+  width: 100%;
+}
+
+.container_nro_est_y_matricula {
+  position: relative;
+  top: -70px;
+  left: 13px;
+  color: white;
+}
+
+input:focus, select:focus {
+  border: 1px solid #21e6c1 !important;
+  outline: 1px solid #21e6c1 !important;
 }/*# sourceMappingURL=secciones.css.map */
