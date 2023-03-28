@@ -93,7 +93,7 @@
                         </div>
                         <div class="d-grid">
                             <span>
-                                <input type="number" data-type="CI" id="ins_DNI" pattern="[0-9]{8}" title="Debe escribir una letra 'V' seguida de 8 números" name="DNI_s">
+                                <input type="number" data-type="CI" disabled id="ins_DNI" pattern="[0-9]{8}" title="Debe escribir una letra 'V' seguida de 8 números" name="DNI_s">
                                 <label for="ins_DNI">CI: </label>
                             </span>
                             <span>
