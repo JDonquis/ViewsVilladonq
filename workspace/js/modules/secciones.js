@@ -534,6 +534,8 @@ document.querySelector("body").onclick = (e) => {
     });
 
     document.querySelector("#toastsContainerTopRight").remove();
+    btn_save.classList.remove("d-none");
+
   }
   if (el == document.querySelector(`#toastsContainerTopRight span`)){
     console.log('ayyy nojoda')
