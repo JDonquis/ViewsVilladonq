@@ -63,7 +63,7 @@
                     </div>
                 </div><!-- /.container-fluid -->
             </section>
-            <div class="flex-center full-screen">
+            <!-- <div class="flex-center full-screen">
                 <form class="new_subject_parent card_form">
                     
 
@@ -82,7 +82,7 @@
 
                    
                 </form>
-            </div>
+            </div> -->
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">

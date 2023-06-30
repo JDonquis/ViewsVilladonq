@@ -259,8 +259,10 @@ document.querySelector("body").onclick = (e) => {
 
   //btn guardar
   if (el.id === "btn_save") {
-    console.log(data);
+
+    //after saving in DB do this: (delete local and reset data)
     localStorage.removeItem("sections_data");
+    data = {}
   }
 
   // event: click on crear una nueva sección ************************************+
@@ -675,7 +677,7 @@ function addNewSection(year, saveInLocal = true) {
   if (total_rooms.value - total_sections.textContent > 0) {
     const year_div = document.querySelector(`.each_year[data-year="${year}"]`);
     const section = abc[year_div.querySelector(`.nSectionsByYear`).textContent];
-
+    
     const article = document.createElement("article");
     year_div.querySelector(".tab-pane.active")?.classList.remove("active");
     year_div
@@ -688,7 +690,7 @@ function addNewSection(year, saveInLocal = true) {
     const li = document.createElement("li");
     li.classList.add("nav-item");
     li.innerHTML = `
-    <a class="nav-link active" href="#${section}" data-toggle="tab">${section}</a>
+    <a class="nav-link active" href="#${section+year}" data-toggle="tab">${section}</a>
     `;
     year_div.querySelector(`.sections_nav`).append(li);
     // console.log(document.querySelector('.sections_nav'))

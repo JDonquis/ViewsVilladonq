@@ -1,7 +1,7 @@
 <?php
 
 
-require_once $_SERVER["DOCUMENT_ROOT"] . "/VillaDonq/helpers/type_user.php";
+// require_once $_SERVER["DOCUMENT_ROOT"] . "/VillaDonq/helpers/type_user.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/VillaDonq/controller/request_controller.php";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/VillaDonq/routes/routes.php";
 

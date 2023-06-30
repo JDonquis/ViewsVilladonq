@@ -1,0 +1,74 @@
+@import "general_plantilla.scss";
+ 
+.modal-dialog {   
+   
+    gap: 30px;
+    max-width: min-content !important;
+    .permisos_div {
+        padding: 35px;
+        width: 300px;
+        @media (min-width: 490px) { 
+            width: 800px;
+        }
+        padding-top: 0;
+        border: 0;
+        box-shadow: none;
+        .modal-header {
+            border-color: $color2;
+        }
+        h4 {
+            color: $color3;
+        }
+        
+        label {
+            display: block !important;
+            height: min-content;
+            transition: color .2s ease-in-out;
+            &:hover {
+                color: $color4;
+                cursor: pointer;
+                opacity: .7;
+            }
+        input[type=checkbox] {
+            margin-right: 10px;
+            outline-color: $color1; 
+            &:checked {
+                accent-color: $color4 !important; 
+            }
+        }
+        }
+    }
+
+
+    @include card-form('', calc(min(95%, 680px)));   
+    .card_form > *{
+        border-color: $color2;
+        border-top: none;
+
+        input {
+            padding: 3px;
+        }
+    }
+    
+    .parent_btn_submit{
+        width: 120px !important;
+        input{
+            padding-block: 8px;
+        }
+    }
+    .btn_cancelar {
+        background: none;
+        border: 1px solid $color3;
+        color: $color3;  
+    }
+}
+span.actions {
+    display: flex;
+    gap: 15px;
+}
+.fa-edit:hover, .fa-trash-can:hover {
+    cursor: pointer; 
+}
+tr {
+    transition: all linear .3s;
+}

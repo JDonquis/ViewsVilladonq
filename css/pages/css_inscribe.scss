@@ -69,57 +69,15 @@ body, html {
                 transition: .4s all ease;
                 // height: 100%;
 
-                label {  
-                    transform: translateX(10px);
-                }
             }
         }
 
         // inputs
-        .d-grid {
-            @media (min-width: 400px) {
-                
-                display: grid;
-                grid-template-columns: repeat(2, 1fr); 
-                gap: 20px;
-            }
-        } 
-
-        input[type=file] {
-            margin-bottom: 25px;
-            color: $color3;
-            display: block;
-            width: 100%;
-        }
         
-        ::-webkit-file-upload-button { 
-             
-            transition: all .4s ease;
-            margin-top: 10px;
-            margin-bottom: 5px;
-            height: 30px;
-            width: 100%;
-            display: block;
-            background-color: $color2;
-            border: none;
-            color: white;
 
-            &:hover {
-                cursor: pointer;
-                background: $color4;
-                color: $color1;
-            }
-        }
+        
 
-        #ins_date_birth {
-            color: transparent;
-
-            &.focus_valid {
-                color: white !important;
-            }
-        }
-
-        .parent_btn_submit {
+        .parent_btn_submit { 
             margin: 0 !important;
             border-radius: 4px;
 

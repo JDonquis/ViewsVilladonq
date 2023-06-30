@@ -347,23 +347,6 @@ fieldset {
   }
 }
 
-.feedback_message {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  width: 300px;
-  height: 60px;
-  transform: translateY(calc(-100% - 20px)) translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 2s ease-out;
-  z-index: 1000;
-}
-.feedback_message.active {
-  animation: toDown 3s ease;
-}
-
 @keyframes toDown {
   0% {
     transform: translateY(calc(-100% - 20px)) translateX(-50%);
@@ -382,16 +365,6 @@ fieldset {
     opacity: 0;
   }
 }
-.success_feedback {
-  background: green;
-  color: white;
-}
-
-.fail_feedback {
-  background: #081f3d;
-  color: red !important;
-}
-
 .history_arrows:hover {
   cursor: pointer;
   color: #278ea5;
@@ -420,6 +393,212 @@ fieldset {
   box-shadow: 0px 0px 9px grey;
 }
 
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none;
+}
+
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal.fade .modal-dialog {
+    transition: none;
+  }
+}
+.modal.show .modal-dialog {
+  transform: none;
+}
+
+.modal-dialog-scrollable {
+  display: flex;
+  max-height: calc(100% - 1rem);
+}
+
+.modal-dialog-scrollable .modal-content {
+  max-height: calc(100vh - 1rem);
+  overflow: hidden;
+}
+
+.modal-dialog-scrollable .modal-header,
+.modal-dialog-scrollable .modal-footer {
+  flex-shrink: 0;
+}
+
+.modal-dialog-scrollable .modal-body {
+  overflow-y: auto;
+}
+
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 1rem);
+}
+
+.modal-dialog-centered::before {
+  display: block;
+  height: calc(100vh - 1rem);
+  content: "";
+}
+
+.modal-dialog-centered.modal-dialog-scrollable {
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.modal-dialog-centered.modal-dialog-scrollable .modal-content {
+  max-height: none;
+}
+
+.modal-dialog-centered.modal-dialog-scrollable::before {
+  content: none;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+  outline: 0;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+.modal-backdrop.fade {
+  opacity: 0;
+}
+
+.modal-backdrop.show {
+  opacity: 0.5;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #e9ecef;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+.modal-header .close, .modal-header .mailbox-attachment-close {
+  padding: 1rem;
+  margin: -1rem -1rem -1rem auto;
+}
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-top: 1px solid #e9ecef;
+  border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+
+.modal-footer > :not(:first-child) {
+  margin-left: 0.25rem;
+}
+
+.modal-footer > :not(:last-child) {
+  margin-right: 0.25rem;
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+  .modal-dialog-scrollable {
+    max-height: calc(100% - 3.5rem);
+  }
+  .modal-dialog-scrollable .modal-content {
+    max-height: calc(100vh - 3.5rem);
+  }
+  .modal-dialog-centered {
+    min-height: calc(100% - 3.5rem);
+  }
+  .modal-dialog-centered::before {
+    height: calc(100vh - 3.5rem);
+  }
+  .modal-content {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  }
+  .modal-sm {
+    max-width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg,
+  .modal-xl {
+    max-width: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal-xl {
+    max-width: 1140px;
+  }
+}
 .fade_effect .slider_wrap {
   position: relative !important;
 }
@@ -773,6 +952,42 @@ body, html {
   text-align: center;
   width: 100%;
 }
+@media (min-width: 400px) {
+  .cont_h1_and_form form.inscribe .card_form .d-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+.cont_h1_and_form form.inscribe .card_form input[type=file] {
+  margin-bottom: 25px;
+  color: #278ea5;
+  display: block;
+  width: 100%;
+}
+.cont_h1_and_form form.inscribe .card_form input[type=date] {
+  color: transparent;
+}
+.cont_h1_and_form form.inscribe .card_form input[type=date].focus_valid {
+  color: white !important;
+}
+.cont_h1_and_form form.inscribe .card_form ::-webkit-file-upload-button {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  height: 30px;
+  width: 100%;
+  display: block;
+  background-color: #1f4287;
+  border: none;
+  color: white;
+}
+.cont_h1_and_form form.inscribe .card_form ::-webkit-file-upload-button:hover {
+  cursor: pointer;
+  background: #21e6c1;
+  color: #081f3d;
+}
 .cont_h1_and_form form.inscribe .card_form .cont_input_label,
 .cont_h1_and_form form.inscribe .card_form span {
   position: relative;
@@ -786,6 +1001,7 @@ body, html {
 }
 .cont_h1_and_form form.inscribe .card_form .cont_input_label label,
 .cont_h1_and_form form.inscribe .card_form span label {
+  transform: translateX(10px);
   position: absolute;
   padding: 0;
   display: block;
@@ -795,6 +1011,7 @@ body, html {
   transition: all 0.3s ease;
   background: transparent;
   z-index: 1;
+  margin-bottom: 0 !important;
 }
 .cont_h1_and_form form.inscribe .card_form .cont_input_label label:hover,
 .cont_h1_and_form form.inscribe .card_form span label:hover {
@@ -805,6 +1022,13 @@ body, html {
   transform: translateY(-24px);
   color: #21e6c1;
 }
+@media (min-width: 400px) {
+  .cont_h1_and_form form.inscribe .card_form .d-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
 .cont_h1_and_form form.inscribe .card_form input:not(input[type=submit], input[type=radio], input[type=file]), .cont_h1_and_form form.inscribe .card_form select {
   border: 0;
   display: block;
@@ -812,9 +1036,9 @@ body, html {
   background: rgb(11, 38, 73);
   border-radius: 3px;
   transition: 0.3s all ease;
-  padding: 10px;
-  padding-bottom: 5px;
-  font-size: 18px;
+  padding: 10px !important;
+  padding-bottom: 5px !important;
+  font-size: 15px;
   width: 100%;
 }
 .cont_h1_and_form form.inscribe .card_form input:not(input[type=submit], input[type=radio], input[type=file]):focus, .cont_h1_and_form form.inscribe .card_form select:focus {
@@ -829,7 +1053,7 @@ body, html {
   transition: 0.3s all ease;
   padding: 10px;
   padding-bottom: 5px;
-  font-size: 18px;
+  font-size: 17px;
   width: 100%;
   outline: none;
 }
@@ -839,45 +1063,6 @@ body, html {
 }
 .cont_h1_and_form form.inscribe .card_form fieldset {
   transition: 0.4s all ease;
-}
-.cont_h1_and_form form.inscribe .card_form fieldset label {
-  transform: translateX(10px);
-}
-@media (min-width: 400px) {
-  .cont_h1_and_form form.inscribe .d-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-.cont_h1_and_form form.inscribe input[type=file] {
-  margin-bottom: 25px;
-  color: #278ea5;
-  display: block;
-  width: 100%;
-}
-.cont_h1_and_form form.inscribe ::-webkit-file-upload-button {
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  height: 30px;
-  width: 100%;
-  display: block;
-  background-color: #1f4287;
-  border: none;
-  color: white;
-}
-.cont_h1_and_form form.inscribe ::-webkit-file-upload-button:hover {
-  cursor: pointer;
-  background: #21e6c1;
-  color: #081f3d;
-}
-.cont_h1_and_form form.inscribe #ins_date_birth {
-  color: transparent;
-}
-.cont_h1_and_form form.inscribe #ins_date_birth.focus_valid {
-  color: white !important;
 }
 .cont_h1_and_form form.inscribe .parent_btn_submit {
   margin: 0 !important;
